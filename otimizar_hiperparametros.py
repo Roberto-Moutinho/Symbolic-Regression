@@ -11,9 +11,6 @@ import optuna
 from pathlib import Path
 
 
-# ============================================================
-# CONFIGURAÇÕES GERAIS
-# ============================================================
 
 ARQUIVO_PLANILHA = "hiperparametros.csv"
 
@@ -30,9 +27,7 @@ DATASET = "dataset.csv"
 CONFIG_BASE = "config_base.json"
 
 
-# ============================================================
-# LEITURA DA PLANILHA
-# ============================================================
+
 
 def carregar_hiperparametros(algoritmo):
 
@@ -56,9 +51,7 @@ def carregar_hiperparametros(algoritmo):
     return df
 
 
-# ============================================================
-# INTERPRETAÇÃO DAS FAIXAS
-# ============================================================
+
 
 def interpretar_faixa(valor):
 
@@ -88,9 +81,7 @@ def interpretar_faixa(valor):
     return None
 
 
-# ============================================================
-# CONVERSÃO DO HIPERPARÂMETRO PARA OPTUNA
-# ============================================================
+
 
 def sugerir_parametro(trial, linha):
 
@@ -109,9 +100,7 @@ def sugerir_parametro(trial, linha):
 
     minimo, maximo = faixa
 
-    # --------------------------------------------------------
-    # INTEIROS
-    # --------------------------------------------------------
+ 
 
     if tipo.lower() == "inteiro":
 
@@ -129,9 +118,7 @@ def sugerir_parametro(trial, linha):
             int(maximo)
         )
 
-    # --------------------------------------------------------
-    # CONTÍNUOS
-    # --------------------------------------------------------
+    
 
     if tipo.lower() == "contínuo":
 
@@ -152,9 +139,7 @@ def sugerir_parametro(trial, linha):
     return None
 
 
-# ============================================================
-# GERAÇÃO DOS HIPERPARÂMETROS
-# ============================================================
+
 
 def gerar_parametros(trial, df):
 
@@ -177,9 +162,7 @@ def gerar_parametros(trial, df):
     return parametros
 
 
-# ============================================================
-# ATUALIZAÇÃO DO JSON DO uDSR
-# ============================================================
+
 
 def atualizar_config_udsr(
     config_base,
@@ -190,27 +173,21 @@ def atualizar_config_udsr(
 
     config = copy.deepcopy(config_base)
 
-    # --------------------------------------------------------
-    # DATASET
-    # --------------------------------------------------------
+   
 
     if "task" not in config:
         config["task"] = {}
 
     config["task"]["dataset"] = dataset
 
-    # --------------------------------------------------------
-    # SEED
-    # --------------------------------------------------------
+  
 
     if "experiment" not in config:
         config["experiment"] = {}
 
     config["experiment"]["seed"] = seed
 
-    # --------------------------------------------------------
-    # PARÂMETROS DO GP MELD
-    # --------------------------------------------------------
+
 
     if "gp_meld" not in config:
         config["gp_meld"] = {}
@@ -250,9 +227,7 @@ def atualizar_config_udsr(
     return config
 
 
-# ============================================================
-# EXECUÇÃO DO uDSR
-# ============================================================
+
 
 def executar_udsr(config_path):
 
@@ -281,9 +256,7 @@ def executar_udsr(config_path):
     return resultado.stdout
 
 
-# ============================================================
-# EXTRAÇÃO DO RMSE
-# ============================================================
+
 
 def extrair_rmse(log):
 
@@ -326,9 +299,7 @@ def extrair_rmse(log):
     return valores[-1]
 
 
-# ============================================================
-# FUNÇÃO OBJETIVO DO OPTUNA
-# ============================================================
+
 
 def criar_objective(
     df,
@@ -361,9 +332,7 @@ def criar_objective(
                 f"{nome}: {valor}"
             )
 
-        # ----------------------------------------------------
-        # CONFIGURAÇÃO
-        # ----------------------------------------------------
+       
 
         config = atualizar_config_udsr(
             config_base,
@@ -399,10 +368,7 @@ def criar_objective(
                 indent=4
             )
 
-        # ----------------------------------------------------
-        # EXECUTA uDSR
-        # ----------------------------------------------------
-
+        
         log = executar_udsr(
             config_path
         )
@@ -416,9 +382,7 @@ def criar_objective(
 
             arquivo.write(log)
 
-        # ----------------------------------------------------
-        # OBTÉM MÉTRICA
-        # ----------------------------------------------------
+        
 
         rmse = extrair_rmse(
             log
@@ -444,9 +408,7 @@ def criar_objective(
     return objective
 
 
-# ============================================================
-# EXECUÇÃO DA OTIMIZAÇÃO
-# ============================================================
+
 
 def otimizar():
 
@@ -454,9 +416,7 @@ def otimizar():
         f"\nAlgoritmo selecionado: {ALGORITMO}"
     )
 
-    # --------------------------------------------------------
-    # CARREGA HIPERPARÂMETROS
-    # --------------------------------------------------------
+  
 
     df = carregar_hiperparametros(
         ALGORITMO
@@ -475,9 +435,7 @@ def otimizar():
         ].to_string(index=False)
     )
 
-    # --------------------------------------------------------
-    # CONFIGURAÇÃO BASE
-    # --------------------------------------------------------
+   
 
     with open(
         CONFIG_BASE,
@@ -489,15 +447,11 @@ def otimizar():
             arquivo
         )
 
-    # --------------------------------------------------------
-    # RESULTADOS
-    # --------------------------------------------------------
+   
 
     todos_resultados = []
 
-    # --------------------------------------------------------
-    # DIFERENTES SEMENTES
-    # --------------------------------------------------------
+  
 
     for seed in SEMENTES:
 
@@ -529,9 +483,7 @@ def otimizar():
             n_trials=N_TRIALS
         )
 
-        # ----------------------------------------------------
-        # MELHOR RESULTADO
-        # ----------------------------------------------------
+       
 
         print("\nMelhor resultado:")
         print(
@@ -542,9 +494,7 @@ def otimizar():
             f"RMSE = {study.best_value}"
         )
 
-        # ----------------------------------------------------
-        # RESULTADOS DOS TRIALS
-        # ----------------------------------------------------
+       
 
         resultados = study.trials_dataframe()
 
@@ -556,9 +506,7 @@ def otimizar():
             resultados
         )
 
-    # --------------------------------------------------------
-    # JUNTA TODOS OS RESULTADOS
-    # --------------------------------------------------------
+   
 
     resultados_finais = pd.concat(
         todos_resultados,
@@ -590,9 +538,7 @@ def otimizar():
     )
 
 
-# ============================================================
-# MAIN
-# ============================================================
+
 
 if __name__ == "__main__":
 
