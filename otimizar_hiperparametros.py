@@ -12,7 +12,7 @@ from pathlib import Path
 
 
 
-ARQUIVO_PLANILHA = "hiperparametros.csv"
+ARQUIVO_PLANILHA = "hiperparametros_treinamento.csv"
 
 PASTA_RESULTADOS = Path("resultados_otimizacao")
 
