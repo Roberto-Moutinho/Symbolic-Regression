@@ -1,9 +1,4 @@
-"""
-Construção do espaço de busca dos hiperparâmetros.
 
-A função principal deste módulo recebe uma descrição de um
-hiperparâmetro e utiliza o Optuna para sugerir um valor.
-"""
 
 from __future__ import annotations
 
