@@ -1,6 +1,4 @@
-"""
-Configuração dos samplers utilizados pelo Optuna.
-"""
+
 
 from __future__ import annotations
 
@@ -13,26 +11,7 @@ def create_sampler(
     seed: Optional[int] = 42,
     sampler_name: str = "tpe",
 ) -> optuna.samplers.BaseSampler:
-    """
-    Cria o sampler utilizado pelo estudo Optuna.
-
-    Parâmetros
-    ----------
-    seed:
-        Semente aleatória para reprodutibilidade.
-
-    sampler_name:
-        Nome do sampler.
-
-        Atualmente suportados:
-        - "tpe"
-        - "random"
-
-    Retorna
-    -------
-    optuna.samplers.BaseSampler
-        Sampler configurado.
-    """
+   
 
     name = sampler_name.lower()
 
