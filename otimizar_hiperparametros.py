@@ -31,7 +31,7 @@ CONFIG_BASE = "config_base.json"
 
 def carregar_hiperparametros(algoritmo):
 
-    df = pd.read_excel(
+    df = pd.read_csv(
         ARQUIVO_PLANILHA,
         sheet_name="Espaço de busca Hiperparâmetros"
     )
@@ -520,7 +520,7 @@ def otimizar():
 
     arquivo_saida = (
         PASTA_RESULTADOS /
-        "resultados_hiperparametros.xlsx"
+        "resultados_hiperparametros.csv"
     )
 
     resultados_finais.to_excel(
