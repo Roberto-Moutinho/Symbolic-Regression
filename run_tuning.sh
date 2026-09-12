@@ -45,7 +45,7 @@ for ALGORITHM in "${ALGORITHMS[@]}"; do
                 echo "Seed:      $SEED"
                 echo "------------------------------------------"
 
-                python "EXECUTORES/executar_${ALGORITHM}.py" \
+                python "executores/executar_${ALGORITHM}.py" \
                     --hyperparameters "dados/hiperparametros_treinamento_corrigido.csv" \
                     --dataset "dados/${DATASET}" \
                     --fold "$FOLD" \
