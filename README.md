@@ -1,4 +1,4 @@
-# Symbolic Regression Benchmark
+# Symbolic Regression Benchmark #
 
 Benchmark experimental de algoritmos de **Regressão Simbólica (Symbolic Regression)**, com foco na comparação de diferentes abordagens evolutivas, probabilísticas, neurais e baseadas em Large Language Models (LLMs).
 
@@ -195,12 +195,7 @@ chmod +x run_final.sh
 
 > Os scripts devem ser executados a partir da raiz do projeto.
 
-## Status
 
-O projeto está em desenvolvimento. O protocolo experimental, os espaços de busca dos hiperparâmetros e as implementações dos executores estão sendo validados antes da execução completa do benchmark.
 
-## Autor
 
-**Roberto Moutinho**
-Universidade Federal do ABC (UFABC)
 
