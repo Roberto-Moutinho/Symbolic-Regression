@@ -1,0 +1,64 @@
+﻿algoritmo,hiperparametro,tipo,valor_padrao,limite_inferior,limite_superior,observacao
+Operon,population_size,integer,500,100.0,2000.0,"Keep; 500 x 400 generations = 200,000 evaluations"
+Operon,pool_size,integer,500,100.0,2000.0,Tuning parameter
+Operon,generations,integer,400,100.0,2000.0,"Corrected for 200,000-evaluation budget when population_size=500"
+Operon,crossover_probability,float,0.9,0.5,1.0,Tuning parameter
+Operon,mutation_probability,float,0.3,0.01,0.5,Tuning parameter
+Operon,optimizer_iterations,integer,100,10.0,500.0,Tuning parameter; does not replace the external evaluation budget
+Operon,max_depth,integer,10,3.0,20.0,Tuning parameter
+Operon,max_length,integer,50,10.0,100.0,Tuning parameter
+Operon,tournament_size,integer,5,2.0,10.0,Tuning parameter
+GOMEA,d,integer,5,,,No range defined in original table
+GOMEA,pop,integer,500,100.0,2000.0,Tuning parameter
+GOMEA,fset,categorical,"[""+,-,*,/,sin,log,sqrt""]",,,Operator set; C1/C2 must be documented separately
+GOMEA,g,integer,400,100.0,2000.0,"Corrected for 200,000-evaluation budget when pop=500"
+GOMEA,t,integer,-1,,,No range defined in original table
+GOMEA,e,integer,-1,,,No range defined in original table
+GPZDG,pop_size,integer,500,100.0,2000.0,Tuning parameter
+GPZDG,generations,integer,400,100.0,2000.0,"Corrected for 200,000-evaluation budget when pop_size=500"
+QLattice,total_models,integer,200000,20000.0,500000.0,Corrected proxy budget; verify that total_models corresponds to the intended evaluation counter
+QLattice,models_per_sample,integer,10,1.0,50.0,Tuning parameter
+QLattice,threads,integer,1,,,Hardware/resource parameter; keep fixed rather than tune
+PySR,population_size,integer,200,50.0,1000.0,Algorithm parameter
+PySR,populations,integer,10,1.0,30.0,Algorithm parameter
+PySR,niterations,integer,50,50.0,1000.0,Algorithm parameter; do not use product of these fields as the common budget
+PySR,max_evals,integer,200000,50000.0,200000.0,Native common evaluation budget; preferred over population_size*populations*niterations
+PySR,binary_operators,categorical,"[""+"",""-"",""*"",""/""]",,,C1
+PySR,unary_operators,categorical,"[""exp"",""sin"",""log""]",,,C2 support; adjust per scenario
+PySR,maxsize,integer,50,10.0,100.0,Tuning parameter
+PySR,maxdepth,integer,10,3.0,20.0,Tuning parameter
+PySR,crossover_probability,float,0.9,0.5,1.0,Tuning parameter
+PySR,optimizer_iterations,integer,50,10.0,500.0,Tuning parameter
+PySR,optimizer_nrestarts,integer,2,1.0,10.0,Tuning parameter
+PySR,tournament_selection_n,integer,5,2.0,10.0,Tuning parameter
+GSGP,pop_size,integer,500,100.0,2000.0,Tuning parameter
+GSGP,n_iter,integer,400,100.0,2000.0,"Corrected from 10,000; 500 x 400 = 200,000 evaluations under the stated assumption"
+GSGP,p_inflate,float,0.5,0.0,1.0,Tuning parameter
+GSGP,ms_lower,float,0,0.0,1.0,Tuning parameter
+GSGP,ms_upper,float,1,0.1,2.0,Tuning parameter
+uDSR,generations,integer,20,10.0,100.0,Algorithm parameter; not directly equivalent to external evaluations
+uDSR,p_crossover,float,0.5,0.1,0.9,Tuning parameter
+uDSR,p_mutate,float,0.5,0.1,0.9,Tuning parameter
+uDSR,tournament_size,integer,5,2.0,10.0,Tuning parameter
+uDSR,train_n,integer,200000,20000.0,200000.0,Use only if this is the implementation's actual sample/evaluation control; verify in code
+uDSR,mutate_tree_max,integer,3,1.0,6.0,Tuning parameter
+TPSR,horizon,integer,200,100.0,500.0,Algorithm parameter; no direct evaluation-budget equivalence established
+TPSR,rollout,integer,3,1.0,10.0,Tuning parameter
+TPSR,width,integer,3,1.0,10.0,Tuning parameter
+TPSR,ucb_constant,float,1.0,0.1,5.0,Tuning parameter
+TPSR,max_input_points,integer,200,50.0,1000.0,Tuning parameter
+TPSR,beam_size,integer,10,1.0,50.0,Tuning parameter
+TPSR,n_trees_to_refine,integer,10,1.0,20.0,Tuning parameter
+DySymNet,learning_rate2,float,0.01,0.0001,0.1,Tuning parameter
+DySymNet,reg_weight,float,0.005,1e-05,0.1,Tuning parameter
+DySymNet,threshold,float,0.05,0.001,0.2,Corrected spelling from 'threashold'; verify actual code key
+DySymNet,n_epochs1,integer,10001,1000.0,20000.0,Training parameter; not directly equivalent to symbolic evaluations
+DySymNet,n_epochs2,integer,10001,1000.0,20000.0,Training parameter; not directly equivalent to symbolic evaluations
+DySymNet,max_norm,float,1.0,0.1,5.0,Tuning parameter
+RAG-SR,n_gen,integer,100,50.0,300.0,Algorithm parameter; evaluation equivalence must be verified in implementation
+RAG-SR,n_pop,integer,200,50.0,500.0,Algorithm parameter
+RAG-SR,gene_num,integer,10,1.0,20.0,Algorithm parameter
+LLM-SR,num_islands,integer,10,1.0,20.0,Tuning parameter
+LLM-SR,reset_period,integer,14400,3600.0,43200.0,Seconds; tuning parameter
+LLM-SR,cluster_sampling_temperature_init,float,0.1,0.01,1.0,Corrected type from Integer to Float
+LLM-SR,cluster_sampling_temperature_period,integer,30000,5000.0,43200.0,Range expanded so default 30000 is valid; verify intended range in code
