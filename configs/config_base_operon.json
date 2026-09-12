@@ -1,1 +1,120 @@
-
+{
+  "experiment": {
+    "budget": {
+      "max_evaluations": 200000,
+      "max_time_seconds": 3600
+    },
+    "cross_validation": {
+      "n_folds": 5,
+      "shuffle": true,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    "final_seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ]
+  },
+  "operator_sets": {
+    "C1": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    },
+    "C2": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  "algorithm": "Operon",
+  "parameters": {
+    "population_size": 500,
+    "generations": null,
+    "pool_size": 500,
+    "crossover_probability": 0.9,
+    "mutation_probability": 0.3,
+    "optimizer_iterations": 100,
+    "max_depth": 10,
+    "max_length": 50,
+    "tournament_size": 5
+  },
+  "tuning_space": {
+    "population_size": [
+      100,
+      250,
+      500,
+      1000,
+      2000
+    ],
+    "generations_rule": "200000 // population_size",
+    "pool_size": {
+      "min": 100,
+      "max": 2000
+    },
+    "crossover_probability": {
+      "min": 0.5,
+      "max": 1.0
+    },
+    "mutation_probability": {
+      "min": 0.01,
+      "max": 0.5
+    },
+    "optimizer_iterations": {
+      "min": 10,
+      "max": 500
+    },
+    "max_depth": {
+      "min": 3,
+      "max": 20
+    },
+    "max_length": {
+      "min": 10,
+      "max": 100
+    },
+    "tournament_size": {
+      "min": 2,
+      "max": 10
+    }
+  },
+  "protocol_notes": {
+    "tuning_repetitions_per_fold": 5,
+    "tuning_total_executions_per_dataset_scenario_algorithm": 25,
+    "tuning_datasets": [
+      "chemical_2_competition_train.csv",
+      "friction_dyn_one-hot_train.csv",
+      "nasa_battery_1_10min_train.csv",
+      "nikuradse_1_train.csv"
+    ],
+    "selection_metric": "mean_validation_R2",
+    "tie_break": "lower_expression_complexity",
+    "preserve_all_trials": true,
+    "preserve_individual_fold_seed_results": true
+  }
+}
