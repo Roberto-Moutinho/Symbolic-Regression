@@ -1,1 +1,85 @@
-
+{
+  "experiment": {
+    "budget": {
+      "max_evaluations": 200000,
+      "max_time_seconds": 3600
+    },
+    "cross_validation": {
+      "n_folds": 5,
+      "shuffle": true,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    "final_seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ]
+  },
+  "operator_sets": {
+    "C1": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    },
+    "C2": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  "algorithm": "GOMEA",
+  "parameters": {
+    "pop": 500,
+    "g": null
+  },
+  "tuning_space": {
+    "pop": [
+      100,
+      250,
+      500,
+      1000,
+      2000
+    ],
+    "g_rule": "200000 // pop"
+  },
+  "protocol_notes": {
+    "tuning_repetitions_per_fold": 5,
+    "tuning_total_executions_per_dataset_scenario_algorithm": 25,
+    "tuning_datasets": [
+      "chemical_2_competition_train.csv",
+      "friction_dyn_one-hot_train.csv",
+      "nasa_battery_1_10min_train.csv",
+      "nikuradse_1_train.csv"
+    ],
+    "selection_metric": "mean_validation_R2",
+    "tie_break": "lower_expression_complexity",
+    "preserve_all_trials": true,
+    "preserve_individual_fold_seed_results": true
+  }
+}
