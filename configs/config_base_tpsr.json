@@ -1,1 +1,112 @@
-
+{
+  "experiment": {
+    "budget": {
+      "max_evaluations": 200000,
+      "max_time_seconds": 3600
+    },
+    "cross_validation": {
+      "n_folds": 5,
+      "shuffle": true,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    "final_seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ]
+  },
+  "operator_sets": {
+    "C1": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    },
+    "C2": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  "algorithm": "TPSR",
+  "parameters": {
+    "horizon": 200,
+    "rollout": 3,
+    "width": 3,
+    "ucb_constant": 1.0,
+    "max_input_points": 200,
+    "beam_size": 10,
+    "n_trees_to_refine": 10,
+    "max_evals": 200000
+  },
+  "tuning_space": {
+    "horizon": {
+      "min": 100,
+      "max": 500
+    },
+    "rollout": {
+      "min": 1,
+      "max": 10
+    },
+    "width": {
+      "min": 1,
+      "max": 10
+    },
+    "ucb_constant": {
+      "min": 0.1,
+      "max": 5.0
+    },
+    "max_input_points": {
+      "min": 50,
+      "max": 1000
+    },
+    "beam_size": {
+      "min": 1,
+      "max": 50
+    },
+    "n_trees_to_refine": {
+      "min": 1,
+      "max": 20
+    },
+    "max_evals": 200000
+  },
+  "protocol_notes": {
+    "tuning_repetitions_per_fold": 5,
+    "tuning_total_executions_per_dataset_scenario_algorithm": 25,
+    "tuning_datasets": [
+      "chemical_2_competition_train.csv",
+      "friction_dyn_one-hot_train.csv",
+      "nasa_battery_1_10min_train.csv",
+      "nikuradse_1_train.csv"
+    ],
+    "selection_metric": "mean_validation_R2",
+    "tie_break": "lower_expression_complexity",
+    "preserve_all_trials": true,
+    "preserve_individual_fold_seed_results": true
+  }
+}
