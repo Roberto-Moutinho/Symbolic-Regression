@@ -1,1 +1,130 @@
-
+{
+  "experiment": {
+    "budget": {
+      "max_evaluations": 200000,
+      "max_time_seconds": 3600
+    },
+    "cross_validation": {
+      "n_folds": 5,
+      "shuffle": true,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    "final_seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ]
+  },
+  "operator_sets": {
+    "C1": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    },
+    "C2": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  "algorithm": "PySR",
+  "parameters": {
+    "population_size": 200,
+    "populations": 10,
+    "niterations": 1000,
+    "binary_operators": [
+      "+",
+      "-",
+      "*",
+      "/"
+    ],
+    "unary_operators": [],
+    "maxsize": 50,
+    "maxdepth": 10,
+    "crossover_probability": 0.9,
+    "optimizer_iterations": 50,
+    "optimizer_nrestarts": 2,
+    "tournament_selection_n": 5,
+    "max_evals": 200000
+  },
+  "tuning_space": {
+    "population_size": {
+      "min": 50,
+      "max": 1000
+    },
+    "populations": {
+      "min": 1,
+      "max": 30
+    },
+    "niterations": {
+      "min": 1000,
+      "max": 1000000,
+      "role": "ceiling"
+    },
+    "maxsize": {
+      "min": 10,
+      "max": 100
+    },
+    "maxdepth": {
+      "min": 3,
+      "max": 20
+    },
+    "crossover_probability": {
+      "min": 0.5,
+      "max": 1.0
+    },
+    "optimizer_iterations": {
+      "min": 10,
+      "max": 500
+    },
+    "optimizer_nrestarts": {
+      "min": 1,
+      "max": 10
+    },
+    "tournament_selection_n": {
+      "min": 2,
+      "max": 10
+    },
+    "max_evals": 200000
+  },
+  "protocol_notes": {
+    "tuning_repetitions_per_fold": 5,
+    "tuning_total_executions_per_dataset_scenario_algorithm": 25,
+    "tuning_datasets": [
+      "chemical_2_competition_train.csv",
+      "friction_dyn_one-hot_train.csv",
+      "nasa_battery_1_10min_train.csv",
+      "nikuradse_1_train.csv"
+    ],
+    "selection_metric": "mean_validation_R2",
+    "tie_break": "lower_expression_complexity",
+    "preserve_all_trials": true,
+    "preserve_individual_fold_seed_results": true
+  }
+}
