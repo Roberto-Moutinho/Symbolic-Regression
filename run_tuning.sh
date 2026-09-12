@@ -47,7 +47,7 @@ for ALGORITHM in "${ALGORITHMS[@]}"; do
 
                 python "executores/executar_${ALGORITHM}.py" \
                     --hyperparameters "dados/hiperparametros_treinamento_corrigido.csv" \
-                    --dataset "dados/${DATASET}" \
+                    --dataset "dados/datasets/${DATASET}"
                     --fold "$FOLD" \
                     --output-dir "resultados/${ALGORITHM}/${DATASET_NAME}/fold_${FOLD}/seed_${SEED}" \
                     --n-trials 50 \
