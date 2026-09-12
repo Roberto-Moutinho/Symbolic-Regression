@@ -1,1 +1,94 @@
-
+{
+  "experiment": {
+    "budget": {
+      "max_evaluations": 200000,
+      "max_time_seconds": 3600
+    },
+    "cross_validation": {
+      "n_folds": 5,
+      "shuffle": true,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ]
+    },
+    "final_seeds": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ]
+  },
+  "operator_sets": {
+    "C1": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    },
+    "C2": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  "algorithm": "RAG-SR",
+  "parameters": {
+    "n_pop": 200,
+    "n_gen": null,
+    "gene_num": 10,
+    "neural_pool": 0.1,
+    "max_evals": 200000
+  },
+  "tuning_space": {
+    "n_pop": {
+      "min": 50,
+      "max": 1000
+    },
+    "n_gen_rule": "floor(200000 / n_pop)",
+    "gene_num": {
+      "min": 2,
+      "max": 20
+    },
+    "neural_pool": {
+      "min": 0.0,
+      "max": 1.0
+    },
+    "max_evals": 200000
+  },
+  "protocol_notes": {
+    "tuning_repetitions_per_fold": 5,
+    "tuning_total_executions_per_dataset_scenario_algorithm": 25,
+    "tuning_datasets": [
+      "chemical_2_competition_train.csv",
+      "friction_dyn_one-hot_train.csv",
+      "nasa_battery_1_10min_train.csv",
+      "nikuradse_1_train.csv"
+    ],
+    "selection_metric": "mean_validation_R2",
+    "tie_break": "lower_expression_complexity",
+    "preserve_all_trials": true,
+    "preserve_individual_fold_seed_results": true
+  }
+}
