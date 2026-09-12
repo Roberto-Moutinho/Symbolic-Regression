@@ -24,7 +24,7 @@ for ALGORITHM in "${ALGORITHMS[@]}"; do
     echo "=========================================="
 
     python "EXECUTORES/executar_${ALGORITHM}.py" \
-        --csv dados/hiperparametros_treinamento.csv \
+        --csv dados/hiperparametros_treinamento_corrigido.csv \
         --output-dir "resultados/${ALGORITHM}" \
         --n-trials 50 \
         --seed 42 \
