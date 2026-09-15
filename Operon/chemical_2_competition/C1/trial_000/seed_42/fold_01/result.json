@@ -1,0 +1,12 @@
+{
+    "algorithm": "Operon",
+    "dataset": "chemical_2_competition",
+    "scenario": "C1",
+    "trial": 0,
+    "seed": 42,
+    "fold": 1,
+    "r2": null,
+    "mse": null,
+    "complexity": null,
+    "status": "pending"
+}
