@@ -1,4 +1,3 @@
-
 import argparse
 import json
 import os
@@ -82,6 +81,7 @@ def run_operon(
     seed,
     operators=DEFAULT_OPERATORS,
     population_size=DEFAULT_POPULATION_SIZE,
+    pool_size=None,
     generations=DEFAULT_GENERATIONS,
     max_depth=DEFAULT_MAX_DEPTH,
     max_length=DEFAULT_MAX_LENGTH,
@@ -92,6 +92,9 @@ def run_operon(
     optimizer_iterations=DEFAULT_OPTIMIZER_ITERATIONS,
 ):
     set_seed(seed)
+
+    if pool_size is None:
+        pool_size = population_size
 
     evaluation_budget = population_size * generations
 
@@ -107,7 +110,7 @@ def run_operon(
         max_depth=max_depth,
         max_length=max_length,
         objectives=["mse", "length"],
-        pool_size=population_size,
+        pool_size=pool_size,
         population_size=population_size,
         reinserter="keep-best",
         tournament_size=tournament_size,
@@ -175,6 +178,7 @@ def run_from_files(
     seed,
     operators=DEFAULT_OPERATORS,
     population_size=DEFAULT_POPULATION_SIZE,
+    pool_size=None,
     generations=DEFAULT_GENERATIONS,
 ):
     train_path, test_path = get_dataset_paths(dataset)
@@ -290,4 +294,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
