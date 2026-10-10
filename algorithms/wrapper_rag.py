@@ -5,40 +5,7 @@ from evolutionary_forest.forest import EvolutionaryForestRegressor
 
 
 class RAGSRRegressor(BaseEstimator, RegressorMixin):
-    """RAG-SR: Retrieval-Augmented Generation for Neural Symbolic Regression
-
-    A wrapper for the EvolutionaryForestRegressor that implements the RAG-SR approach.
-
-    Parameters
-    ----------
-    n_gen : int, default=100
-        Number of generations for the evolutionary algorithm.
-    n_pop : int, default=200
-        Population size for the evolutionary algorithm.
-    gene_num : int, default=10
-        Number of trees (features) in each solution.
-    neural_pool : float, default=0.1
-        Probability of using neural generation vs retrieval.
-    neural_pool_num_of_functions : int, default=5
-        Maximum number of functions in generated trees.
-    weight_of_contrastive_learning : float, default=0.05
-        Weight of contrastive loss in the neural network.
-    neural_pool_dropout : float, default=0.1
-        Dropout rate for the neural network.
-    neural_pool_transformer_layer : int, default=1
-        Number of transformer layers in the neural network.
-    neural_pool_hidden_size : int, default=64
-        Hidden size of the neural network.
-    neural_pool_mlp_layers : int, default=3
-        Number of MLP layers in the neural network.
-    selective_retrain : bool, default=True
-        Whether to selectively retrain the neural network.
-    negative_data_augmentation : bool, default=True
-        Whether to use scale-invariant data augmentation.
-    select : str, default="AutomaticLexicase"
-        Selection method for the evolutionary algorithm.
-    """
-
+   
     def __init__(
         self,
         n_gen=100,
