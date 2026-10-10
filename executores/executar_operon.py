@@ -1,6 +1,15 @@
 from __future__ import annotations
 
 import argparse
+
+import sys
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+
+if str(ROOT_DIR) not in sys.path:
+    sys.path.insert(0, str(ROOT_DIR))
+
 import json
 import random
 from pathlib import Path
@@ -13,10 +22,12 @@ from sklearn.model_selection import KFold
 
 EXECUTORES_DIR = Path(__file__).resolve().parent
 ROOT = EXECUTORES_DIR.parent
-if str(EXECUTORES_DIR) not in sys.path:
-    sys.path.insert(0, str(EXECUTORES_DIR))
+
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(EXECUTORES_DIR))
 
 from utils_otimizacao import run_optimization
+
 from algorithms.wrapper_operon import run_operon
 
 
@@ -137,11 +148,7 @@ def evaluate_trial_5fold(
     scenario: str,
     seed: int,
 ) -> dict[str, Any]:
-    """Avalia UM conjunto de hiperparâmetros nos cinco folds.
-
-    O valor retornado em R2 é a média dos cinco R² de validação.
-    O conjunto de teste externo nunca é usado aqui.
-    """
+   
     params = operon_params_for_trial(params)
     kfold = KFold(n_splits=N_FOLDS, shuffle=True, random_state=seed)
 
@@ -237,9 +244,7 @@ def run_tuning(
     run_dir = output_dir / ALGORITHM / dataset / scenario / f"seed_{seed}"
     run_dir.mkdir(parents=True, exist_ok=True)
 
-    # O arquivo CSV contém generations, mas o protocolo do projeto define
-    # generations = 200000 // population_size. Por isso generations não entra
-    # no espaço independente do Optuna.
+   
     def evaluator(params, trial):
         return evaluate_trial_5fold(
             params,
@@ -277,7 +282,6 @@ def run_tuning(
         metadata=metadata,
     )
 
-    # Também salva um resumo explícito do protocolo daquela execução.
     summary = {
         "dataset": dataset,
         "scenario": scenario,
@@ -362,7 +366,6 @@ def default_experiment_params() -> dict[str, Any]:
         "tournament_size": 5,
         "optimizer": "lm",
         "optimizer_iterations": 100,
-        # Derivado do orçamento da planilha: 200.000 / 500 = 400 gerações.
         "generations": MAX_EVALUATIONS // population_size,
     }
 
@@ -448,7 +451,6 @@ def run_all_experiments(
                                 "operators": OPERATORS[scenario],
                             })
 
-                        # Escrita atômica para não deixar arquivo parcial se houver interrupção.
                         temporary = output.with_suffix(output.suffix + ".tmp")
                         temporary.write_text(
                             json.dumps(results, ensure_ascii=False, indent=2, default=str),
