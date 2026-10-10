@@ -11,7 +11,6 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import KFold
 
-# Permite executar este arquivo diretamente: python executores/executar_operon.py
 EXECUTORES_DIR = Path(__file__).resolve().parent
 ROOT = EXECUTORES_DIR.parent
 if str(EXECUTORES_DIR) not in sys.path:
@@ -103,8 +102,7 @@ def operon_params_for_trial(params: dict[str, Any]) -> dict[str, Any]:
     params["population_size"] = population_size
     params["generations"] = max(1, MAX_EVALUATIONS // population_size)
 
-    # O wrapper atual usa pool_size explicitamente. Se ele estiver sendo
-    # otimizado, respeitamos o valor sugerido pelo Optuna.
+   
     if "pool_size" in params:
         params["pool_size"] = int(params["pool_size"])
 
@@ -307,6 +305,8 @@ def run_single_fold(
     params: dict[str, Any],
 ) -> None:
     """Modo legado: uma única execução de um fold com HP já definidos."""
+    if scenario not in OPERATORS:
+        raise ValueError(f"Scenario inválido: {scenario}. Use C1 ou C2.")
     if not 1 <= fold <= N_FOLDS:
         raise ValueError("fold deve estar entre 1 e 5.")
 
@@ -349,33 +349,178 @@ def run_single_fold(
     print(f"Resultado salvo em: {output}")
 
 
+def default_experiment_params() -> dict[str, Any]:
+    """Configuração-base do protocolo (200.000 avaliações por execução)."""
+    population_size = 500
+    return {
+        "population_size": population_size,
+        "pool_size": 500,
+        "max_depth": 10,
+        "max_length": 50,
+        "crossover_probability": 0.9,
+        "mutation_probability": 0.3,
+        "tournament_size": 5,
+        "optimizer": "lm",
+        "optimizer_iterations": 100,
+        # Derivado do orçamento da planilha: 200.000 / 500 = 400 gerações.
+        "generations": MAX_EVALUATIONS // population_size,
+    }
+
+
+def run_all_experiments(
+    output_dir: Path,
+    seeds: list[int],
+    overwrite: bool = False,
+) -> None:
+    """Executa cenário × dataset × seed × fold, gravando um arquivo por execução.
+
+    Os arquivos mantêm o formato do arquivo de exemplo do repositório: uma lista
+    JSON de modelos, embora a extensão solicitada seja .csv.
+    """
+    output_dir.mkdir(parents=True, exist_ok=True)
+    params = default_experiment_params()
+    total = len(OPERATORS) * len(DATASETS) * len(seeds) * N_FOLDS
+    current = 0
+    failures: list[dict[str, str]] = []
+
+    for scenario in ("C1", "C2"):
+        for dataset in DATASETS:
+            X, y = load_train_data(dataset)
+            for seed in seeds:
+                set_seed(seed)
+                splitter = KFold(n_splits=N_FOLDS, shuffle=True, random_state=seed)
+                splits = list(splitter.split(X))
+                for fold, (train_idx, validation_idx) in enumerate(splits, start=1):
+                    current += 1
+                    output = output_dir / (
+                        f"{scenario}_{dataset}_seed_{seed}_fold_{fold}.csv"
+                    )
+
+                    if output.exists() and not overwrite:
+                        try:
+                            existing = json.loads(output.read_text(encoding="utf-8"))
+                            if isinstance(existing, list) and existing:
+                                print(f"[{current}/{total}] JÁ EXISTE, pulando: {output.name}")
+                                continue
+                        except (OSError, json.JSONDecodeError):
+                            pass
+
+                    print(
+                        f"\n[{current}/{total}] Operon | {scenario} | {dataset} "
+                        f"| seed={seed} | fold={fold} | orçamento={MAX_EVALUATIONS:,}",
+                        flush=True,
+                    )
+                    try:
+                        # As avaliações usam apenas o train oficial; o fold reservado
+                        # funciona como validação. O test oficial não é usado no tuning.
+                        results = run_operon(
+                            X_train=X[train_idx],
+                            y_train=y[train_idx],
+                            X_test=X[validation_idx],
+                            y_test=y[validation_idx],
+                            seed=seed,
+                            operators=OPERATORS[scenario],
+                            population_size=params["population_size"],
+                            pool_size=params["pool_size"],
+                            generations=params["generations"],
+                            max_depth=params["max_depth"],
+                            max_length=params["max_length"],
+                            crossover_probability=params["crossover_probability"],
+                            mutation_probability=params["mutation_probability"],
+                            tournament_size=params["tournament_size"],
+                            optimizer=params["optimizer"],
+                            optimizer_iterations=params["optimizer_iterations"],
+                        )
+                        if not results:
+                            raise RuntimeError("Operon não retornou modelos na fronteira de Pareto.")
+
+                        for result in results:
+                            result.update({
+                                "algorithm": ALGORITHM,
+                                "dataset": dataset,
+                                "scenario": scenario,
+                                "seed": seed,
+                                "fold": fold,
+                                "population_size": params["population_size"],
+                                "pool_size": params["pool_size"],
+                                "generations": params["generations"],
+                                "max_evaluations": MAX_EVALUATIONS,
+                                "operators": OPERATORS[scenario],
+                            })
+
+                        # Escrita atômica para não deixar arquivo parcial se houver interrupção.
+                        temporary = output.with_suffix(output.suffix + ".tmp")
+                        temporary.write_text(
+                            json.dumps(results, ensure_ascii=False, indent=2, default=str),
+                            encoding="utf-8",
+                        )
+                        temporary.replace(output)
+                        print(f"Salvo: {output}", flush=True)
+                    except Exception as exc:
+                        failures.append({"file": output.name, "error": repr(exc)})
+                        print(f"FALHA em {output.name}: {exc}", flush=True)
+
+    report = {
+        "algorithm": ALGORITHM,
+        "expected_experiments": total,
+        "scenarios": list(OPERATORS),
+        "datasets": list(DATASETS),
+        "seeds": seeds,
+        "folds": list(range(1, N_FOLDS + 1)),
+        "max_evaluations_per_run": MAX_EVALUATIONS,
+        "parameters": params,
+        "failures": failures,
+        "successful_or_existing_files": len(list(output_dir.glob("*.csv"))),
+    }
+    (output_dir / "relatorio_execucao_operon.json").write_text(
+        json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    print("\nExecução em lote finalizada.")
+    print(f"Arquivos CSV existentes na pasta: {report['successful_or_existing_files']}")
+    print(f"Falhas nesta execução: {len(failures)}")
+    if failures:
+        print(f"Consulte: {output_dir / 'relatorio_execucao_operon.json'}")
+
+
 def main():
     parser = argparse.ArgumentParser(
-        description=(
-            "Operon com tuning por Optuna usando 5-fold cross-validation "
-            "dentro de cada trial."
-        )
+        description="Executor do Operon: tuning Optuna ou lote cenário × dataset × seed × fold."
     )
-
-    parser.add_argument("--dataset", required=True, choices=DATASETS.keys())
-    parser.add_argument("--scenario", required=True, choices=["C1", "C2"])
-    parser.add_argument("--seed", required=True, type=int)
+    parser.add_argument("--all-experiments", action="store_true",
+                        help="Executa todas as 200 combinações do protocolo.")
+    parser.add_argument("--dataset", choices=DATASETS.keys())
+    parser.add_argument("--scenario", choices=["C1", "C2"])
+    parser.add_argument("--seed", type=int)
+    parser.add_argument("--seeds", nargs="+", type=int, default=[42, 43, 44, 45, 46],
+                        help="Seeds do modo --all-experiments (padrão: 42 43 44 45 46).")
     parser.add_argument("--n-trials", type=int, default=50)
-    parser.add_argument("--hyperparameters", type=Path, default=ROOT / "dados/hiperparametros_treinamento_corrigido.csv")
+    parser.add_argument("--hyperparameters", type=Path,
+                        default=ROOT / "dados/hiperparametros_treinamento_corrigido.csv")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "resultados_tuning_cv")
     parser.add_argument("--direction", choices=["maximize", "minimize"], default="maximize")
     parser.add_argument("--metric", default="R2")
-
     parser.add_argument("--fold", type=int, choices=[1, 2, 3, 4, 5])
     parser.add_argument("--output", type=Path)
-
+    parser.add_argument("--overwrite", action="store_true",
+                        help="No modo lote, refaz mesmo os CSVs já existentes.")
     args = parser.parse_args()
 
+    if args.all_experiments:
+        batch_dir = args.output_dir if args.output_dir != ROOT / "resultados_tuning_cv" else ROOT / "results_tuning" / "Operon"
+        run_all_experiments(batch_dir, args.seeds, overwrite=args.overwrite)
+        return
+
+    if args.dataset is None or args.scenario is None or args.seed is None:
+        parser.error("Informe --all-experiments ou então --dataset, --scenario e --seed.")
+
     if args.fold is not None:
-        raise SystemExit(
-            "O modo --fold pertence ao protocolo antigo. Para o novo tuning, "
-            "não informe --fold: cada trial já executa os 5 folds."
+        output = args.output or (
+            ROOT / "results_tuning" / "Operon" /
+            f"{args.scenario}_{args.dataset}_seed_{args.seed}_fold_{args.fold}.csv"
         )
+        run_single_fold(args.dataset, args.scenario, args.seed, args.fold, output,
+                        default_experiment_params())
+        return
 
     best = run_tuning(
         dataset=args.dataset,
@@ -387,10 +532,10 @@ def main():
         direction=args.direction,
         metric=args.metric,
     )
-
     print(f"\nMelhores hiperparâmetros: {best}")
 
 
 if __name__ == "__main__":
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
     main()
-
