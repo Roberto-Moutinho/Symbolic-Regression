@@ -1,0 +1,64 @@
+{
+  "algorithm": "Operon",
+  "expected_experiments": 200,
+  "scenarios": [
+    "C1",
+    "C2"
+  ],
+  "datasets": [
+    "chemical_2_competition",
+    "friction_dyn_one-hot",
+    "nasa_battery_1_10min",
+    "nikuradse_1"
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "max_evaluations_per_run": 200000,
+  "parameters": {
+    "population_size": 500,
+    "pool_size": 500,
+    "max_depth": 10,
+    "max_length": 50,
+    "crossover_probability": 0.9,
+    "mutation_probability": 0.3,
+    "tournament_size": 5,
+    "optimizer": "lm",
+    "optimizer_iterations": 100,
+    "generations": 400
+  },
+  "failures": [
+    {
+      "file": "C2_chemical_2_competition_seed_42_fold_4.csv",
+      "error": "ValueError(\"Input contains infinity or a value too large for dtype('float64').\")"
+    },
+    {
+      "file": "C2_chemical_2_competition_seed_46_fold_5.csv",
+      "error": "ValueError(\"Input contains infinity or a value too large for dtype('float64').\")"
+    },
+    {
+      "file": "C2_nikuradse_1_seed_42_fold_3.csv",
+      "error": "ValueError('Input contains NaN.')"
+    },
+    {
+      "file": "C2_nikuradse_1_seed_43_fold_1.csv",
+      "error": "ValueError('Input contains NaN.')"
+    },
+    {
+      "file": "C2_nikuradse_1_seed_44_fold_2.csv",
+      "error": "ValueError(\"Input contains infinity or a value too large for dtype('float64').\")"
+    }
+  ],
+  "successful_or_existing_files": 195
+}
