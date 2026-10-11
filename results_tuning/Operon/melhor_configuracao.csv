@@ -1,0 +1,5 @@
+Dataset,Classe,Seed,Fold,MSE de teste,R2 de teste,Complexidade
+chemical_2_competition,C1,45,2,0.01695719,0.792528,85
+friction_dyn_one-hot,C1,46,1,0.00001734,0.911305,55
+nasa_battery_1_10min,C1,44,5,252.6045638,0.997973,87
+nikuradse_1,C1,43,1,0.00007614,0.997590,87
