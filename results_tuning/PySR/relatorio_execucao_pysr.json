@@ -1,0 +1,45 @@
+{
+  "algorithm": "PySR",
+  "expected_experiments": 200,
+  "scenarios": [
+    "C1",
+    "C2"
+  ],
+  "datasets": [
+    "chemical_2_competition",
+    "friction_dyn_one-hot",
+    "nasa_battery_1_10min",
+    "nikuradse_1"
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "max_evaluations_per_run": 200000,
+  "max_time_seconds_per_run": 3600,
+  "parameters": {
+    "population_size": 200,
+    "populations": 10,
+    "niterations_ceiling": 1000000,
+    "maxsize": 50,
+    "maxdepth": 10,
+    "crossover_probability": 0.9,
+    "optimizer_iterations": 50,
+    "optimizer_nrestarts": 2,
+    "tournament_selection_n": 5,
+    "parallelism": "serial"
+  },
+  "failures": [],
+  "successful_or_existing_files": 200,
+  "csv_files_found": 200
+}

@@ -1,0 +1,436 @@
+[
+  {
+    "model_id": 0,
+    "expression": "0.5224398",
+    "complexity": 1,
+    "mse_train": 0.03442127511077914,
+    "mse_test": 0.034839068363170446,
+    "r2_train": -4.618527782440651e-13,
+    "r2_test": -0.019847197573459097,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 29.197552,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 1,
+    "expression": "(x1 / x0) ^ 0.16990305",
+    "complexity": 5,
+    "mse_train": 0.01632658653288934,
+    "mse_test": 0.015564170752056837,
+    "r2_train": 0.5256832734884898,
+    "r2_test": 0.5443886226067995,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 29.197552,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 2,
+    "expression": "(1.9867103 / sqrt(x0)) ^ 0.5463185",
+    "complexity": 6,
+    "mse_train": 0.004566187721396978,
+    "mse_test": 0.00438477683407502,
+    "r2_train": 0.8673440275903908,
+    "r2_test": 0.8716440313615353,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 29.197552,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 3,
+    "expression": "(x1 / x0) ^ (0.0651149 + 0.18617749)",
+    "complexity": 7,
+    "mse_train": 0.001604022726786953,
+    "mse_test": 0.0014276147589088206,
+    "r2_train": 0.9534002525581805,
+    "r2_test": 0.958209304109096,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 29.197552,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 4,
+    "expression": "sqrt(sqrt(log(x0 / (x0 + (log(log(x1)) - x1)))))",
+    "complexity": 12,
+    "mse_train": 0.001494477387460183,
+    "mse_test": 0.0012851359275206332,
+    "r2_train": 0.9565827418463975,
+    "r2_test": 0.9623800998201085,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 29.197552,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 5,
+    "expression": "sqrt(sqrt(log(x0 / (x0 + (log(log(x1)) - x1))) * sqrt(sqrt(sqrt(sqrt(exp(0.039985184)))))))",
+    "complexity": 19,
+    "mse_train": 0.0014943975649693328,
+    "mse_test": 0.001285826520354322,
+    "r2_train": 0.9565850608334365,
+    "r2_test": 0.9623598840336599,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 29.197552,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 6,
+    "expression": "1.0660495 / (exp(0.32675058 / log(0.18109667 / (0.14250259 - (1.9313681 / x0)))) - (1.4972341 / (-1.2012415 / (2.9609041 / x0))))",
+    "complexity": 21,
+    "mse_train": 0.0012842771723933603,
+    "mse_test": 0.0010965929692748303,
+    "r2_train": 0.9626894364528704,
+    "r2_test": 0.9678993348807241,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 29.197552,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 7,
+    "expression": "(sqrt(exp((x0 / (sqrt(x0) ^ sqrt(x0))) ^ 0.038136724) ^ exp(x0 ^ (sqrt(sqrt(0.038136724)) / x0))) / x0) ^ sqrt(0.038136724)",
+    "complexity": 25,
+    "mse_train": 0.001247241293702267,
+    "mse_test": 0.0011186050025232246,
+    "r2_train": 0.9637653953931455,
+    "r2_test": 0.9672549746416024,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 29.197552,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 8,
+    "expression": "(sqrt(exp((0.72690547 / (sqrt(x0) ^ sqrt(x0))) ^ 0.038136724) ^ exp((x0 / 0.44191206) ^ 0.038136724)) / (x0 - (((x1 / 0.44191206) / 0.038136724) ^ 0.038136724))) ^ 0.19528626",
+    "complexity": 30,
+    "mse_train": 0.0012455513561604981,
+    "mse_test": 0.0011308046480706538,
+    "r2_train": 0.9638144911206086,
+    "r2_test": 0.9668978533146703,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 29.197552,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 9,
+    "expression": "((sqrt(exp((0.94802153 / (sqrt(x0) ^ sqrt(x0))) ^ 0.036945146)) ^ exp((x0 / 0.4008988) ^ 0.03397093)) / (x0 - ((sqrt(x1) / sqrt(sqrt(x0))) ^ 3.2276664))) ^ 0.19692892",
+    "complexity": 31,
+    "mse_train": 0.0012184642632401847,
+    "mse_test": 0.0010774210211022025,
+    "r2_train": 0.9646014199265041,
+    "r2_test": 0.9684605570526852,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 29.197552,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 10,
+    "expression": "sqrt(sqrt(log(x0 / (x0 + (log(log(x1)) - x1))) * (((0.039985184 - x1) * (log(log(x1)) * (0.039985184 * sqrt(sqrt(x0))))) + sqrt(sqrt(sqrt(sqrt(x0)))))))",
+    "complexity": 32,
+    "mse_train": 0.0012092567110659218,
+    "mse_test": 0.0011035464822353371,
+    "r2_train": 0.96486891589069,
+    "r2_test": 0.9676957840672482,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 29.197552,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 11,
+    "expression": "((sqrt(exp((0.44303185 / (sqrt(x1) ^ sqrt(x0))) ^ 0.048647363)) ^ exp((x0 / 0.44151005) ^ 0.055664305)) / (x0 - ((sqrt(x1) / sqrt(sqrt(x0))) ^ exp((x0 / (0.033714302 ^ sqrt(x1))) ^ 0.05436907)))) ^ 0.22564359",
+    "complexity": 39,
+    "mse_train": 0.0011668248095141245,
+    "mse_test": 0.001111000956956832,
+    "r2_train": 0.9661016390078685,
+    "r2_test": 0.9674775685548571,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 29.197552,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 12,
+    "expression": "0.27827197 ^ ((0.22177398 ^ (x1 ^ 0.07786979)) ^ ((0.7671377 ^ sqrt(x0)) ^ ((0.4205328 ^ ((0.95071346 ^ sqrt(x0)) ^ 0.2806426)) ^ ((((sqrt(x0) ^ 0.54299647) ^ (x1 ^ 0.93234986)) ^ 0.93008626) ^ ((0.7312983 ^ x0) ^ (0.27311745 ^ (sqrt(x1) ^ 0.28172994)))))))",
+    "complexity": 43,
+    "mse_train": 0.0011338879703180723,
+    "mse_test": 0.0009904336831632918,
+    "r2_train": 0.9670585134725728,
+    "r2_test": 0.9710069452596429,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 29.197552,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 13,
+    "expression": "0.2540902 ^ ((0.07169973 ^ (x1 ^ -0.2513099)) ^ ((0.8925644 ^ sqrt(x0)) ^ ((0.6077617 ^ ((0.35428813 ^ sqrt(x0)) ^ (0.081337504 ^ (-0.1286505 ^ x0)))) ^ ((((sqrt(x0) ^ 1.6314434) ^ (x1 ^ 0.8723873)) ^ 0.7172077) ^ ((0.80012625 ^ x0) ^ (0.16456148 ^ sqrt(x1 ^ 0.74219054)))))))",
+    "complexity": 47,
+    "mse_train": 0.0010393183333149724,
+    "mse_test": 0.0009381355890254977,
+    "r2_train": 0.9698059316521372,
+    "r2_test": 0.9725378720969761,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 29.197552,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  }
+]

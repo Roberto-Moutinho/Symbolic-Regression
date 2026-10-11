@@ -1,0 +1,622 @@
+[
+  {
+    "model_id": 0,
+    "expression": "x0",
+    "complexity": 1,
+    "mse_train": 2620037.9146675207,
+    "mse_test": 2881763.296544142,
+    "r2_train": -18.165800585043247,
+    "r2_test": -16.458983334197725,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 1,
+    "expression": "1.2917401 ^ x5",
+    "complexity": 3,
+    "mse_train": 341463.9706988106,
+    "mse_test": 378575.06394820445,
+    "r2_train": -1.4978380399586446,
+    "r2_test": -1.2935734312879905,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 2,
+    "expression": "exp(x4) * x5",
+    "complexity": 4,
+    "mse_train": 314557.8935913372,
+    "mse_test": 390364.10949681315,
+    "r2_train": -1.3010177933962694,
+    "r2_test": -1.364996629024628,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 3,
+    "expression": "exp(x4) * exp(x4)",
+    "complexity": 5,
+    "mse_train": 33645.97601897489,
+    "mse_test": 49479.46961415069,
+    "r2_train": 0.7538768186296835,
+    "r2_test": 0.7002317170135535,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 4,
+    "expression": "exp(x4) * (x3 + exp(x4))",
+    "complexity": 7,
+    "mse_train": 33309.66903954403,
+    "mse_test": 48164.26716654669,
+    "r2_train": 0.7563369328391178,
+    "r2_test": 0.7081997890760128,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 5,
+    "expression": "(x5 * 0.57272106) + (exp(x4) * exp(x4))",
+    "complexity": 9,
+    "mse_train": 33085.8088806557,
+    "mse_test": 47672.689331122405,
+    "r2_train": 0.7579744889752984,
+    "r2_test": 0.7111779827557039,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 6,
+    "expression": "(exp(x4) * 0.57272106) + (exp(x4) * exp(x4))",
+    "complexity": 10,
+    "mse_train": 32545.744411682623,
+    "mse_test": 46546.05927190886,
+    "r2_train": 0.7619251065818069,
+    "r2_test": 0.7180036007553515,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 7,
+    "expression": "(x2 ^ x2) + (((x2 ^ x4) / x3) * 2.1762404)",
+    "complexity": 11,
+    "mse_train": 21812.747990994398,
+    "mse_test": 29909.407137331506,
+    "r2_train": 0.8404378898996763,
+    "r2_test": 0.8187957208794278,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 8,
+    "expression": "((x4 ^ x4) / x3) + (((x2 ^ x4) / x3) * 2.1762404)",
+    "complexity": 13,
+    "mse_train": 14352.075061914578,
+    "mse_test": 17619.335097197232,
+    "r2_train": 0.8950133480594562,
+    "r2_test": 0.8932543563898849,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 9,
+    "expression": "((exp(x4) - x0) * (x4 * 0.57272106)) + (exp(x4) * log(x4 * ((x4 * x4) + exp(exp(x4)))))",
+    "complexity": 22,
+    "mse_train": 13741.71559387212,
+    "mse_test": 20117.50506344033,
+    "r2_train": 0.8994781795736136,
+    "r2_test": 0.8781193493409243,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 10,
+    "expression": "((x4 - x0) * (x4 * 0.57272106)) + (log(exp(x4) * (exp(x4) + exp(exp(x4)))) * log(exp(exp(x4))))",
+    "complexity": 23,
+    "mse_train": 11385.617273226431,
+    "mse_test": 16928.911334707176,
+    "r2_train": 0.916713239539523,
+    "r2_test": 0.8974372457261823,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 11,
+    "expression": "((exp(x4) - x0) * x4) + (exp(x4) * log(x0 * ((exp(exp(x4) * 0.57272106) * x4) + exp(exp(x4)))))",
+    "complexity": 24,
+    "mse_train": 7210.11641962011,
+    "mse_test": 11658.345067960523,
+    "r2_train": 0.947257384055482,
+    "r2_test": 0.9293686429798239,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 12,
+    "expression": "((exp(x4) - x0) * x4) + (log(x4 * (x4 * ((x4 * x4) + exp(exp(x4))))) * log(x4 * (x4 + exp(exp(x4)))))",
+    "complexity": 28,
+    "mse_train": 7121.362952599947,
+    "mse_test": 7998.232041821444,
+    "r2_train": 0.947906623228937,
+    "r2_test": 0.9515432096422817,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 13,
+    "expression": "((exp(x4) - x0) * x4) + (log(exp(x4) * ((x4 * 0.57272106) + exp(exp(x4)))) * log(x4 * ((x4 * x4) + exp(exp(x4)))))",
+    "complexity": 29,
+    "mse_train": 6604.35470626947,
+    "mse_test": 6820.135460307649,
+    "r2_train": 0.9516885826023189,
+    "r2_test": 0.9586806343597769,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 14,
+    "expression": "((exp(x4) - x0) * x4) + (log(log(exp(exp(x4))) * ((x4 * 0.57272106) + exp(exp(x4)))) * log((x4 * 0.57272106) * (exp(0.57272106) + exp(exp(x4)))))",
+    "complexity": 32,
+    "mse_train": 6441.087963308016,
+    "mse_test": 6991.919438432433,
+    "r2_train": 0.9528828927381575,
+    "r2_test": 0.9576398918342685,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 15,
+    "expression": "((exp(x4) - x0) * x4) + (log(x4 * ((x4 * 0.57272106) * ((x4 * exp(exp(x4))) + exp(x4)))) * log(x4 * ((x4 * x4) + exp(exp(x4)))))",
+    "complexity": 33,
+    "mse_train": 6321.7789069393875,
+    "mse_test": 6732.610249317694,
+    "r2_train": 0.9537556486511729,
+    "r2_test": 0.9592109003957932,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 16,
+    "expression": "((exp(x4) - x0) * x4) + (log(log(exp((x3 * x4) + exp(x4))) * (x4 + exp(exp(x4)))) * log(x4 * (sqrt(x3) * exp((x3 * x3) + exp(x4)))))",
+    "complexity": 36,
+    "mse_train": 6045.658605865306,
+    "mse_test": 6551.850890087313,
+    "r2_train": 0.9557754921802463,
+    "r2_test": 0.960306019708364,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 17,
+    "expression": "((exp(x4) - x0) * x4) + (log(log((x3 * (x3 * x3)) * exp((x3 * x4) * exp(x4))) * (x4 + exp(exp(x4)))) * log((x4 * sqrt(x3)) * exp((x3 * x3) + exp(x4))))",
+    "complexity": 42,
+    "mse_train": 5803.685002688337,
+    "mse_test": 6271.240452744512,
+    "r2_train": 0.9575455497047469,
+    "r2_test": 0.9620060805547372,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 18,
+    "expression": "((exp(x4) - x0) * x4) + (log(log((((x3 * x3) * x3) * (x3 * (x3 * x3))) * exp((x3 * x4) * exp(x4))) * (x0 + exp(exp(x4)))) * log((x4 * sqrt(x3)) * exp((x3 * x3) + exp(x4))))",
+    "complexity": 48,
+    "mse_train": 5766.412972436419,
+    "mse_test": 6284.006729752563,
+    "r2_train": 0.9578181977817877,
+    "r2_test": 0.9619287368611068,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 19,
+    "expression": "((exp(x4) - x0) * x4) + (log(log((((x3 * x3) * (x3 * x3)) * (x3 * (x3 * x3))) * exp((x3 * x4) * exp(x4))) * (x4 + exp(exp(x4)))) * log((x4 * sqrt(x3)) * exp((x3 * x3) + exp(x4))))",
+    "complexity": 50,
+    "mse_train": 5757.245120705019,
+    "mse_test": 6292.615322787833,
+    "r2_train": 0.9578852613983458,
+    "r2_test": 0.9618765822367094,
+    "seed": 45,
+    "algorithm": "PySR",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 30.26341,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  }
+]
