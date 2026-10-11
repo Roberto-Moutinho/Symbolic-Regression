@@ -1,0 +1,314 @@
+[
+  {
+    "model_id": 0,
+    "expression": "0.52604055",
+    "complexity": 1,
+    "mse_train": 0.03437359573810685,
+    "mse_test": 0.03490710051278077,
+    "r2_train": -0.0003155977910087593,
+    "r2_test": -0.0007569489896905868,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C1",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 10.647308,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 1,
+    "expression": "0.7072011 * 0.752639",
+    "complexity": 3,
+    "mse_train": 0.034371355959283506,
+    "mse_test": 0.03500985980134524,
+    "r2_train": -0.00025041736270359216,
+    "r2_test": -0.0037029705896933773,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C1",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 10.647308,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 2,
+    "expression": "(x1 / x0) + 0.3867928",
+    "complexity": 5,
+    "mse_train": 0.006014524975860985,
+    "mse_test": 0.006467802885554693,
+    "r2_train": 0.8249696309778998,
+    "r2_test": 0.8145735799498862,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C1",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 10.647308,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 3,
+    "expression": "((1.0607182 + x1) / x0) + 0.3867928",
+    "complexity": 7,
+    "mse_train": 0.004576367450085254,
+    "mse_test": 0.004892418232690126,
+    "r2_train": 0.866821854297066,
+    "r2_test": 0.8597385210514448,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C1",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 10.647308,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 4,
+    "expression": "((1.0607182 + x1) / (0.3867928 + x0)) + 0.3867928",
+    "complexity": 9,
+    "mse_train": 0.004523940655227696,
+    "mse_test": 0.004887313773990185,
+    "r2_train": 0.8683475410782154,
+    "r2_test": 0.8598848615506485,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C1",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 10.647308,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 5,
+    "expression": "((1.2353482 + x1) / (0.3867928 + (x0 + 0.43114924))) + 0.3867928",
+    "complexity": 11,
+    "mse_train": 0.00446604355144777,
+    "mse_test": 0.004841502120669332,
+    "r2_train": 0.8700324208452099,
+    "r2_test": 0.8611982427748714,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C1",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 10.647308,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 6,
+    "expression": "((1.2353482 + x1) / ((-0.13485157 + (x0 / x0)) + x0)) + 0.3867928",
+    "complexity": 13,
+    "mse_train": 0.00446375011630446,
+    "mse_test": 0.004844216149964099,
+    "r2_train": 0.8700991627410493,
+    "r2_test": 0.8611204338581582,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C1",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 10.647308,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 7,
+    "expression": "0.35263172 - ((x1 + (0.35263172 - (0.35263172 * -1.2921497))) * ((-1.2921497 + 0.16338128) / x0))",
+    "complexity": 15,
+    "mse_train": 0.004203367934288159,
+    "mse_test": 0.004163204767643669,
+    "r2_train": 0.8776766172512567,
+    "r2_test": 0.8806444522723692,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C1",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 10.647308,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 8,
+    "expression": "0.35263172 - ((x1 + (0.35263172 - (0.35263172 * ((-1.2921497 + -0.48490322) + 0.16338128)))) * ((-1.2921497 + 0.16338128) / x0))",
+    "complexity": 19,
+    "mse_train": 0.004197013608071223,
+    "mse_test": 0.004119842882055531,
+    "r2_train": 0.8778615362709798,
+    "r2_test": 0.8818876007346065,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C1",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 10.647308,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 9,
+    "expression": "(((x1 + 1.9237301) - (2.7081656 / x1)) / x0) + (((((x1 - -0.55959177) / 42.03554) + -4.4091997) / x1) * -0.4101425)",
+    "complexity": 21,
+    "mse_train": 0.003778325883997599,
+    "mse_test": 0.005036215070940553,
+    "r2_train": 0.8900458845185552,
+    "r2_test": 0.8556159877270522,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C1",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 10.647308,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 10,
+    "expression": "0.46469557 - (((x1 - 1.5431614) + (((x1 + (x1 + (x1 + 1.0531747))) + 0.6888084) * (-27.75238 / (x0 + 37.985283)))) * 0.05766489)",
+    "complexity": 23,
+    "mse_train": 0.0009298764497850453,
+    "mse_test": 0.0008393897104926962,
+    "r2_train": 0.9729394060538359,
+    "r2_test": 0.9759354093194178,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C1",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 10.647308,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 11,
+    "expression": "((((x1 - 0.622862) + (x1 + -0.96615505)) - (1.1421255 / x0)) / x0) + (((((x1 - 3.4065466) / ((x0 + -37.318592) / -2.986581)) + -0.6827818) / x1) * -2.2099404)",
+    "complexity": 29,
+    "mse_train": 0.0009193175273359293,
+    "mse_test": 0.000821092614695202,
+    "r2_train": 0.9732466842013474,
+    "r2_test": 0.9764599715287301,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "nikuradse_1",
+    "scenario": "C1",
+    "fold": 5,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 10.647308,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  }
+]
