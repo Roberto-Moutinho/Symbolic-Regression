@@ -1,0 +1,250 @@
+[
+  {
+    "model_id": 0,
+    "expression": "0.08732937",
+    "complexity": 1,
+    "mse_train": 0.00018895491704051833,
+    "mse_test": 0.00021246331326521683,
+    "r2_train": -8.386802363702373e-11,
+    "r2_test": -0.03498243537478163,
+    "seed": 42,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 78.528838,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 1,
+    "expression": "sqrt((0.22084296 ^ (0.6597022 - (x6 ^ 0.22084296))) ^ 0.22084296) * 0.09612417",
+    "complexity": 12,
+    "mse_train": 0.0001649500043485531,
+    "mse_test": 0.00019459483800539885,
+    "r2_train": 0.1270404234729905,
+    "r2_test": 0.05206110054972424,
+    "seed": 42,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 78.528838,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 2,
+    "expression": "sqrt((0.22084296 ^ ((x0 ^ 1.0307823) - x7)) ^ 0.22084296) * exp(-2.3421144)",
+    "complexity": 13,
+    "mse_train": 0.00014750055109014005,
+    "mse_test": 0.00017885217312857952,
+    "r2_train": 0.21938760095413923,
+    "r2_test": 0.12874907732602803,
+    "seed": 42,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 78.528838,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 3,
+    "expression": "((((0.33524936 ^ (log(x0) + 0.28449667)) * 1.0169942) + 0.70604837) ^ 0.2676452) * 0.07614417",
+    "complexity": 14,
+    "mse_train": 9.719329049990087e-05,
+    "mse_test": 9.396610103653167e-05,
+    "r2_train": 0.48562709015288164,
+    "r2_test": 0.5422585546707464,
+    "seed": 42,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 78.528838,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 4,
+    "expression": "(((((0.74420905 ^ (log(x0) + 0.08406924)) + -1.1760069) * 1.8941957) + 1.1444185) ^ 0.2847503) * 0.09233218",
+    "complexity": 16,
+    "mse_train": 9.282175498237384e-05,
+    "mse_test": 9.247143131189496e-05,
+    "r2_train": 0.5087624262762398,
+    "r2_test": 0.5495396089285909,
+    "seed": 42,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 78.528838,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 5,
+    "expression": "-5.561824 / (-15.959196 / (0.31027296 - (((-0.54123694 - x0) * -0.9194442) / (11.032479 - (-25.232729 / (x1 - (-0.15196261 - x1)))))))",
+    "complexity": 21,
+    "mse_train": 6.962288917403118e-05,
+    "mse_test": 7.141836256757427e-05,
+    "r2_train": 0.6315370339638169,
+    "r2_test": 0.652096403446381,
+    "seed": 42,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 78.528838,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 6,
+    "expression": "0.014787487 / ((exp((-0.9155967 - (-0.13744958 / (1.8898749 - x1))) * 0.11880272) * -0.5733413) / (-3.0668645 - (((1.1328654 - x0) * 0.06521814) / (0.19505735 - (0.062364027 / (x1 - (0.027296217 - x1)))))))",
+    "complexity": 32,
+    "mse_train": 6.603889109372833e-05,
+    "mse_test": 7.003389723455453e-05,
+    "r2_train": 0.6505045111628087,
+    "r2_test": 0.6588406139175416,
+    "seed": 42,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 78.528838,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 7,
+    "expression": "0.112549745 / ((exp((-1.8201596 - (0.25426784 / (1.1181953 - x1))) * 0.047006767) * -1.0879842) / (-0.8934177 - (((0.1424674 / (x0 - -1.0899323)) * (0.5099112 - x0)) / (0.031493813 - (-0.68011284 / (x1 - -1.7265447))))))",
+    "complexity": 34,
+    "mse_train": 6.341447081848535e-05,
+    "mse_test": 6.109206199260767e-05,
+    "r2_train": 0.6643936457593979,
+    "r2_test": 0.7023993924812444,
+    "seed": 42,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 2,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 78.528838,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  }
+]

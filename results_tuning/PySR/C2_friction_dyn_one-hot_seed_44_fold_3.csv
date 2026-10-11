@@ -1,0 +1,529 @@
+[
+  {
+    "model_id": 0,
+    "expression": "0.08753586",
+    "complexity": 1,
+    "mse_train": 0.00019304573573191724,
+    "mse_test": 0.0001952267782742535,
+    "r2_train": -1.5809109576991887e-10,
+    "r2_test": -0.014093211124878824,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 1,
+    "expression": "((0.88602316 ^ x2) + (0.6204487 + 0.6204487)) * 0.06596406",
+    "complexity": 9,
+    "mse_train": 0.0001619931058713453,
+    "mse_test": 0.00016366874233739276,
+    "r2_train": 0.16085633654236764,
+    "r2_test": 0.14983302011706734,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 2,
+    "expression": "0.17635772 / (0.22382087 + ((0.2473281 + 1.0859135) ^ (x2 ^ 0.17635772)))",
+    "complexity": 11,
+    "mse_train": 0.0001449270586934178,
+    "mse_test": 0.0001363122367088379,
+    "r2_train": 0.2492605020937121,
+    "r2_test": 0.2919346666393756,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 3,
+    "expression": "0.06596406 * ((0.06596406 * ((0.88602316 ^ x2) * x2)) + (0.6204487 + 0.6204487))",
+    "complexity": 13,
+    "mse_train": 0.00013805058960401217,
+    "mse_test": 0.00014293294987077177,
+    "r2_train": 0.28488143443091796,
+    "r2_test": 0.25754378886291385,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 4,
+    "expression": "0.10549952 * exp(-0.3043214 * (0.10549952 ^ ((-0.3043214 * -0.7858057) ^ exp(log(x0)))))",
+    "complexity": 14,
+    "mse_train": 0.0001116450503066828,
+    "mse_test": 0.00012107810293672957,
+    "r2_train": 0.4216652862025687,
+    "r2_test": 0.3710674156004883,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 5,
+    "expression": "0.10549952 * exp(-0.3043214 * (((0.10549952 / -1.2598414) * -0.3043214) ^ ((-0.3043214 * -0.3043214) ^ exp(log(x0)))))",
+    "complexity": 18,
+    "mse_train": 9.469981072380448e-05,
+    "mse_test": 0.00011459751833175607,
+    "r2_train": 0.5094436539624714,
+    "r2_test": 0.4047304044082626,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 6,
+    "expression": "0.11527839 * (0.69255424 ^ (exp((-1.4795396 * x6) * 0.69255424) * (x0 ^ ((0.69255424 * 0.69255424) ^ (0.11527839 + x0)))))",
+    "complexity": 20,
+    "mse_train": 8.383788457825155e-05,
+    "mse_test": 8.516073795345814e-05,
+    "r2_train": 0.5657097305276335,
+    "r2_test": 0.5576379071744586,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 7,
+    "expression": "0.10549952 * exp(-0.3043214 * (((0.10549952 ^ exp(log(0.9122462 / x1))) ^ exp(log(x0) / -0.3043214)) ^ (0.10549952 ^ exp(0.10549952))))",
+    "complexity": 23,
+    "mse_train": 7.583118120499984e-05,
+    "mse_test": 9.616059816785581e-05,
+    "r2_train": 0.6071854116358473,
+    "r2_test": 0.5004998256809813,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 8,
+    "expression": "0.11527839 * (0.69255424 ^ (exp((-1.4795396 * x6) * 0.69255424) * ((((x6 * 0.17025116) + x0) * 0.74304295) ^ (0.69255424 ^ (0.11527839 + 0.69255424)))))",
+    "complexity": 24,
+    "mse_train": 7.260666147290748e-05,
+    "mse_test": 7.369376695354299e-05,
+    "r2_train": 0.6238888095139543,
+    "r2_test": 0.6172023662408479,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 9,
+    "expression": "0.11527839 * (0.69255424 ^ (exp((-1.4795396 * x6) * (0.69255424 ^ ((-1.4795396 * 0.11527839) + x0))) * ((x0 * 0.69255424) ^ (0.69255424 ^ (x0 + x0)))))",
+    "complexity": 26,
+    "mse_train": 7.238135141057095e-05,
+    "mse_test": 7.188288806719164e-05,
+    "r2_train": 0.625055942584871,
+    "r2_test": 0.6266088626295683,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 10,
+    "expression": "0.10549952 * exp(-0.3043214 * (((0.10549952 ^ exp(log(0.9122462 / x1))) ^ exp(log(x0) / -0.3043214)) ^ (0.10549952 ^ exp((x13 * x13) ^ 0.10549952))))",
+    "complexity": 27,
+    "mse_train": 7.255866729672301e-05,
+    "mse_test": 8.995580418265337e-05,
+    "r2_train": 0.6241374250868914,
+    "r2_test": 0.5327302374740959,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 11,
+    "expression": "0.11527839 * (0.69255424 ^ (exp((-1.4795396 * x6) * (x0 ^ (-1.4795396 * 0.69255424))) * (((((x0 ^ (-1.4795396 * 0.69255424)) * x6) + x0) * 0.74304295) ^ 0.69255424)))",
+    "complexity": 28,
+    "mse_train": 7.09333954534829e-05,
+    "mse_test": 7.046147881828971e-05,
+    "r2_train": 0.6325565276240958,
+    "r2_test": 0.6339922835018661,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 12,
+    "expression": "0.10549952 * exp(-0.3043214 * (((0.10549952 ^ exp(log(0.9122462 / x1))) ^ exp(log(x0) / -0.3043214)) ^ (0.10549952 ^ exp(((-0.3043214 * -0.3043214) * x13) ^ 0.10549952))))",
+    "complexity": 29,
+    "mse_train": 7.089804211804982e-05,
+    "mse_test": 8.629506846407814e-05,
+    "r2_train": 0.6327396621300438,
+    "r2_test": 0.5517456987378906,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 13,
+    "expression": "0.11527839 * (0.69255424 ^ (exp((-1.4795396 * x6) * (x0 ^ (-1.4795396 * 0.69255424))) * ((((x6 * x6) + x0) * 0.74304295) ^ (((0.69255424 ^ 0.11527839) * 0.69255424) ^ (0.11527839 + x0)))))",
+    "complexity": 32,
+    "mse_train": 6.945025587068406e-05,
+    "mse_test": 6.978580996137265e-05,
+    "r2_train": 0.6402393680526093,
+    "r2_test": 0.6375020028488991,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 14,
+    "expression": "0.10549952 * exp(-0.3043214 * (((0.10549952 ^ exp(x13)) ^ (exp(log(x0) / -0.3043214) * exp(log(x0 / x1)))) ^ (0.10549952 ^ exp((-0.3043214 * (-0.3043214 * x13)) ^ (-0.3043214 * -0.3043214)))))",
+    "complexity": 34,
+    "mse_train": 6.80625421446526e-05,
+    "mse_test": 7.976179532955334e-05,
+    "r2_train": 0.6474278911297415,
+    "r2_test": 0.5856823747959203,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 15,
+    "expression": "0.10549952 * exp(-0.3043214 * (((0.10549952 ^ exp(log(x0 / x1))) ^ (exp(log(x0) / -0.3043214) * exp((0.10549952 * x13) ^ (-0.3043214 * -0.3043214)))) ^ (0.10549952 ^ exp((0.10549952 * x13) ^ 0.10549952))))",
+    "complexity": 36,
+    "mse_train": 6.812678175899755e-05,
+    "mse_test": 7.990696313004538e-05,
+    "r2_train": 0.6470951222441116,
+    "r2_test": 0.5849283097939046,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  },
+  {
+    "model_id": 16,
+    "expression": "exp((((0.04232381 ^ log(exp(x0 / x1))) ^ (exp(log(x0) / -0.43040657) * exp((x13 * 0.10590232) ^ 0.11306648))) ^ ((0.20687258 ^ exp(x0 * -0.10904327)) ^ exp((x13 * 0.09612901) ^ 0.062099285))) * -0.44666004) * 0.103701904",
+    "complexity": 39,
+    "mse_train": 5.966011188674053e-05,
+    "mse_test": 6.924902234805025e-05,
+    "r2_train": 0.6909534848310646,
+    "r2_test": 0.6402903123180104,
+    "seed": 44,
+    "algorithm": "PySR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 145.288323,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/",
+        "^"
+      ],
+      "unary_operators": [
+        "exp",
+        "log",
+        "sqrt"
+      ]
+    }
+  }
+]
