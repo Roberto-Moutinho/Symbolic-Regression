@@ -1,0 +1,184 @@
+[
+  {
+    "model_id": 0,
+    "expression": "2.9659162",
+    "complexity": 1,
+    "mse_train": 0.11429500049309027,
+    "mse_test": 0.11045494607314423,
+    "r2_train": -5.038176542626616e-10,
+    "r2_test": -0.00912987837738588,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "chemical_2_competition",
+    "scenario": "C1",
+    "fold": 4,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 12.319085,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 1,
+    "expression": "(x39 / -0.55617744) * (-0.8909994 / x13)",
+    "complexity": 7,
+    "mse_train": 0.10563431289998461,
+    "mse_test": 0.09902024184660677,
+    "r2_train": 0.07577485893977332,
+    "r2_test": 0.09533897607994035,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "chemical_2_competition",
+    "scenario": "C1",
+    "fold": 4,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 12.319085,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 2,
+    "expression": "((x39 / -0.55617744) * (-0.8909994 / x13)) - (-0.017238297 / 0.8189402)",
+    "complexity": 11,
+    "mse_train": 0.10307040090767726,
+    "mse_test": 0.09568415169035642,
+    "r2_train": 0.09820726615389375,
+    "r2_test": 0.12581790322009345,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "chemical_2_competition",
+    "scenario": "C1",
+    "fold": 4,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 12.319085,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 3,
+    "expression": "(((((x19 / 2.8904681) - -0.49203634) - (((x19 * -0.45562503) / (0.34121487 - x4)) / 2.8947723)) - -1.4920337) / (((x4 * 0.15892446) / ((x4 / x19) - 0.5053659)) + x28)) + 2.9225705",
+    "complexity": 31,
+    "mse_train": 0.10157803820500567,
+    "mse_test": 0.10364313639326656,
+    "r2_train": 0.11126437886210594,
+    "r2_test": 0.05310364685771618,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "chemical_2_competition",
+    "scenario": "C1",
+    "fold": 4,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 12.319085,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 4,
+    "expression": "(((((x4 / 2.8866591) - (x19 * -0.17507525)) - (((x19 * -0.48970178) / (0.28575978 - x4)) / 2.8890636)) - 5.375126) / (((-0.38233376 / ((x4 / x19) - 0.5009696)) * (x4 * -0.3823288)) + x28)) + 2.9149392",
+    "complexity": 35,
+    "mse_train": 0.10129091540947588,
+    "mse_test": 0.10087048075278351,
+    "r2_train": 0.11377649920364108,
+    "r2_test": 0.07843496744348855,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "chemical_2_competition",
+    "scenario": "C1",
+    "fold": 4,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 12.319085,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 5,
+    "expression": "(((((x4 / 2.8870397) - -0.49259186) - (((x19 * -0.5023632) / (0.25961292 - x4)) / 2.8868768)) - (0.27650732 - (2.888573 / x19))) / (((-0.47117943 / ((x4 / x19) - 0.5152901)) * (x4 * -0.47117972)) + x28)) + 2.9464314",
+    "complexity": 37,
+    "mse_train": 0.10100518300188809,
+    "mse_test": 0.1015230308127604,
+    "r2_train": 0.11627645463912861,
+    "r2_test": 0.07247319039256728,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "chemical_2_competition",
+    "scenario": "C1",
+    "fold": 4,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 12.319085,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  },
+  {
+    "model_id": 6,
+    "expression": "(((((x4 / 2.887196) - ((x19 * -0.49586797) / 2.8879704)) - (((x19 * -0.49854434) / (0.26740316 - x4)) / 2.887517)) - (-0.4922501 - (x4 / x19))) / (((x4 * 0.12262271) / ((x4 / x19) - 0.4994543)) + x28)) + 2.9046078",
+    "complexity": 39,
+    "mse_train": 0.10078154711616957,
+    "mse_test": 0.1010842977419656,
+    "r2_train": 0.11823310965348943,
+    "r2_test": 0.07648150931454745,
+    "seed": 46,
+    "algorithm": "PySR",
+    "dataset": "chemical_2_competition",
+    "scenario": "C1",
+    "fold": 4,
+    "max_evaluations": 200000,
+    "max_time_seconds": 3600,
+    "runtime_seconds": 12.319085,
+    "operator_set": {
+      "binary_operators": [
+        "+",
+        "-",
+        "*",
+        "/"
+      ],
+      "unary_operators": []
+    }
+  }
+]
