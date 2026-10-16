@@ -1,0 +1,42 @@
+[
+  {
+    "model_id": 0,
+    "expression": "log(x49*log(10.142453570019814*sqrt(x9*log(x54)*log(x1*x16/x27)))/x16)",
+    "complexity": 20,
+    "mse_train": 0.10888232651907977,
+    "mse_test": 0.09263302240877125,
+    "r2_train": 0.06644122772390293,
+    "r2_test": 0.07885036685786362,
+    "seed": 42,
+    "algorithm": "uDSR",
+    "dataset": "chemical_2_competition",
+    "scenario": "C2",
+    "fold": 4,
+    "runtime_seconds": 232.291083,
+    "nll_train": 0.10888232651907977,
+    "nll_test": 0.09263302240877125,
+    "n_samples": 10000,
+    "batch_size": 500,
+    "function_set": [
+      "add",
+      "sub",
+      "mul",
+      "div",
+      "exp",
+      "log",
+      "sqrt",
+      "const",
+      "poly"
+    ],
+    "degree": 3,
+    "run_gp_meld": true,
+    "gp_population_size": 25,
+    "gp_generations": 20,
+    "n_train": 569,
+    "n_test": 142,
+    "n_features": 57,
+    "source_dataset": "/mnt/c/Users/user/OneDrive/Documentos/Symbolic-Regression-main/dados/datasets/chemical_2_competition_train.csv",
+    "status": "success",
+    "error": null
+  }
+]\n

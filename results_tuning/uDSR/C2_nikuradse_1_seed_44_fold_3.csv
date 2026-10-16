@@ -1,0 +1,42 @@
+[
+  {
+    "model_id": 0,
+    "expression": "sqrt(exp(x1*x2/(0.00164266*x1**2*x2 - 0.00826525*x1**2 - 0.887894*x1*x2**2 + 8.39155*x1*x2 - 21.4715*x1 + 27.7852*x2**3 - 373.89*x2**2 + 1596.22*x2 - sqrt(log((x1*sqrt(log(x1)) + x2)/x1)) - 2237.96)))",
+    "complexity": 23,
+    "mse_train": 0.00017958776280461495,
+    "mse_test": 0.00019087887334957035,
+    "r2_train": 0.9948122198294167,
+    "r2_test": 0.9942004711776004,
+    "seed": 44,
+    "algorithm": "uDSR",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 3,
+    "runtime_seconds": 46.124453,
+    "nll_train": 0.00017958776280461495,
+    "nll_test": 0.00019087887334957035,
+    "n_samples": 10000,
+    "batch_size": 500,
+    "function_set": [
+      "add",
+      "sub",
+      "mul",
+      "div",
+      "exp",
+      "log",
+      "sqrt",
+      "const",
+      "poly"
+    ],
+    "degree": 3,
+    "run_gp_meld": true,
+    "gp_population_size": 25,
+    "gp_generations": 20,
+    "n_train": 184,
+    "n_test": 46,
+    "n_features": 2,
+    "source_dataset": "/mnt/c/Users/user/OneDrive/Documentos/Symbolic-Regression-main/dados/datasets/nikuradse_1_train.csv",
+    "status": "success",
+    "error": null
+  }
+]\n
