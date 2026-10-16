@@ -1,0 +1,39 @@
+[
+  {
+    "model_id": 0,
+    "expression": "0.07705184624619967 + 0.008989566251072261/(x1 + x11 + x14 + x17)",
+    "complexity": 15,
+    "mse_train": 0.00011482236276193607,
+    "mse_test": 0.0001254342579209718,
+    "r2_train": 0.40452940770709456,
+    "r2_test": 0.33880515462395155,
+    "seed": 46,
+    "algorithm": "uDSR",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C1",
+    "fold": 5,
+    "runtime_seconds": 27.342486,
+    "nll_train": 0.00011482236276193607,
+    "nll_test": 0.0001254342579209718,
+    "n_samples": 10000,
+    "batch_size": 500,
+    "function_set": [
+      "add",
+      "sub",
+      "mul",
+      "div",
+      "const",
+      "poly"
+    ],
+    "degree": 3,
+    "run_gp_meld": true,
+    "gp_population_size": 25,
+    "gp_generations": 20,
+    "n_train": 808,
+    "n_test": 201,
+    "n_features": 17,
+    "source_dataset": "/mnt/c/Users/user/OneDrive/Documentos/Symbolic-Regression-main/dados/datasets/friction_dyn_one-hot_train.csv",
+    "status": "success",
+    "error": null
+  }
+]\n

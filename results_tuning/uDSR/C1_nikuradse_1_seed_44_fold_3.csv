@@ -1,0 +1,39 @@
+[
+  {
+    "model_id": 0,
+    "expression": "(x1 + x2)/(2.38383e-6*x1**3 + 0.00047428*x1**2*x2 - 0.00433546*x1**2 - 0.377928*x1*x2**2 + 3.83909*x1*x2 - 10.6014*x1 + 18.3226*x2**3 - 253.86*x2**2 + 1137.34*x2 - x2/(x1 + x2) - 1710.44) + 1",
+    "complexity": 19,
+    "mse_train": 0.00017667134714187828,
+    "mse_test": 0.0001792275822137496,
+    "r2_train": 0.994896466790947,
+    "r2_test": 0.9945544757752522,
+    "seed": 44,
+    "algorithm": "uDSR",
+    "dataset": "nikuradse_1",
+    "scenario": "C1",
+    "fold": 3,
+    "runtime_seconds": 88.99472,
+    "nll_train": 0.00017667134714187828,
+    "nll_test": 0.0001792275822137496,
+    "n_samples": 10000,
+    "batch_size": 500,
+    "function_set": [
+      "add",
+      "sub",
+      "mul",
+      "div",
+      "const",
+      "poly"
+    ],
+    "degree": 3,
+    "run_gp_meld": true,
+    "gp_population_size": 25,
+    "gp_generations": 20,
+    "n_train": 184,
+    "n_test": 46,
+    "n_features": 2,
+    "source_dataset": "/mnt/c/Users/user/OneDrive/Documentos/Symbolic-Regression-main/dados/datasets/nikuradse_1_train.csv",
+    "status": "success",
+    "error": null
+  }
+]\n
