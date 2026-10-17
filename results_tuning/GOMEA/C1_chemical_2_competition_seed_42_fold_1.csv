@@ -10,7 +10,6 @@
     "seed": 42,
     "population_size": 500,
     "generations": 400,
-    "max_evaluations": 200000,
     "operators": "+,-,*,/",
     "algorithm": "GOMEA",
     "dataset": "chemical_2_competition",
