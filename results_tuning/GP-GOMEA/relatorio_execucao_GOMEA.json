@@ -1,0 +1,36 @@
+{
+  "algorithm": "GOMEA",
+  "expected_experiments": 200,
+  "successful_or_existing_files": 199,
+  "failures": [
+    {
+      "file": "C2_friction_dyn_one-hot_seed_45_fold_2.csv",
+      "error": "ValueError(\"Input contains infinity or a value too large for dtype('float64').\")"
+    }
+  ],
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "scenarios": [
+    "C1",
+    "C2"
+  ],
+  "datasets": [
+    "chemical_2_competition",
+    "friction_dyn_one-hot",
+    "nasa_battery_1_10min",
+    "nikuradse_1"
+  ],
+  "max_evaluations_per_run": 10000
+}
