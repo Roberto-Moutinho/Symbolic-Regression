@@ -1,0 +1,21 @@
+[
+  {
+    "model_id": 0,
+    "expression": "0.013525*x_31 + 0.02705*x_46 + 0.02705*x_48 - 20.530937",
+    "complexity": 11,
+    "mse_train": 0.050430289077565305,
+    "mse_test": 0.05222722080457614,
+    "r2_train": 0.5539842048283867,
+    "r2_test": 0.5465035573837888,
+    "seed": 42,
+    "population_size": 500,
+    "generations": 20,
+    "max_evaluations": 10000,
+    "operators": "+,-,*,/",
+    "algorithm": "GOMEA",
+    "dataset": "chemical_2_competition",
+    "scenario": "C1",
+    "fold": 5,
+    "pop": 500
+  }
+]
