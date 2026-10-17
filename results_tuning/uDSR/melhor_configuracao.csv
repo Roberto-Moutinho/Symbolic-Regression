@@ -1,0 +1,5 @@
+Dataset,Classe,Seed,Fold,MSE de teste,R2 de teste,Complexidade,Equação
+chemical_2_competition,C2,45,2,0.077262,0.054700,14,"1.7128034716560077*(0.11619029698957249*x57 + exp(-(x24 - exp(sqrt(x55)))/x20))**(1/4)"
+friction_dyn_one-hot,C2,44,2,0.000067,0.671705,9,"0.1095743898054063*exp(-x1 + sqrt(x7))**(1/4)"
+nasa_battery_1_10min,C2,44,2,38.074455,0.999750,18,"Equação extensa; copie a expressão completa do CSV gerado"
+nikuradse_1,C2,43,1,0.000102,0.996777,22,"log((0.000143044*x1**3 + 0.0119744*x1**2*x2 - 0.180883*x1**2 - 12.1398*x1*x2**2 + 125.343*x1*x2 - 308.873*x1 - 177.371*x2**3 + 1123.45*x2**2 - 2799.5*x2 + 3261.23)/(x2*(-x1 - x2 + x2*exp(-1))))/x2"
