@@ -1,0 +1,21 @@
+[
+  {
+    "model_id": 0,
+    "expression": "-0.010139*(2*x_0 + x_1 + 0.616368*x_14 - 2*x_6 + x_0/2.318633**x_0)*exp(0.190044124418911*x_15**x_16)**(-x_0 + x_1**x_6) + 0.120284",
+    "complexity": 36,
+    "mse_train": 3.6489829201569904e-05,
+    "mse_test": 3.610972731533934e-05,
+    "r2_train": 0.8113749543956422,
+    "r2_test": 0.812561259631865,
+    "seed": 45,
+    "population_size": 500,
+    "generations": 20,
+    "max_evaluations": 10000,
+    "operators": "+,-,*,/,^,exp,log,sqrt",
+    "algorithm": "GOMEA",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 4,
+    "pop": 500
+  }
+]

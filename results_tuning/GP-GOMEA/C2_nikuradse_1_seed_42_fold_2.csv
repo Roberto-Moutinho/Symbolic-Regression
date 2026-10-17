@@ -1,0 +1,21 @@
+[
+  {
+    "model_id": 0,
+    "expression": "0.080303 - 68.3630441982517*exp(x_0/(2.95927**x_1*(x_1 + 0.99446)))/((x_1 - 78.9993832785062)*(0.231922563839005*x_0/x_1 + 1)**0.571633)",
+    "complexity": 32,
+    "mse_train": 0.00041028450288767526,
+    "mse_test": 0.00033053348774293115,
+    "r2_train": 0.9881413503275498,
+    "r2_test": 0.9894716309968303,
+    "seed": 42,
+    "population_size": 500,
+    "generations": 20,
+    "max_evaluations": 10000,
+    "operators": "+,-,*,/,^,exp,log,sqrt",
+    "algorithm": "GOMEA",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 2,
+    "pop": 500
+  }
+]

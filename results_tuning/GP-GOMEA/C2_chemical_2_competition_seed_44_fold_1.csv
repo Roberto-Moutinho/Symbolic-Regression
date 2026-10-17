@@ -1,0 +1,21 @@
+[
+  {
+    "model_id": 0,
+    "expression": "0.037534*x_46 + 0.037534*x_48 - 0.037534*(9.132192*x_33 + x_46*x_5)/(x_14 + x_31 - x_48) - 19.762041",
+    "complexity": 25,
+    "mse_train": 0.047008371905877804,
+    "mse_test": 0.053199352975407836,
+    "r2_train": 0.5961262012109546,
+    "r2_test": 0.47774014806297627,
+    "seed": 44,
+    "population_size": 500,
+    "generations": 20,
+    "max_evaluations": 10000,
+    "operators": "+,-,*,/,^,exp,log,sqrt",
+    "algorithm": "GOMEA",
+    "dataset": "chemical_2_competition",
+    "scenario": "C2",
+    "fold": 1,
+    "pop": 500
+  }
+]

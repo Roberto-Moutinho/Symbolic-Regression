@@ -1,0 +1,21 @@
+[
+  {
+    "model_id": 0,
+    "expression": "3.497754*5.587737**x_3*(x_1*x_2 + x_4/x_3)*exp(x_4) + 21.1814355701162*x_0*x_3/x_4 - 3.497754*x_0 - 3060.866211 - 3.497754/(x_0*x_3) + 0.923036364595978*(x_4**2.535063 - 3.568504/x_0)/(x_0*x_3**2)",
+    "complexity": 53,
+    "mse_train": 767.4324501247114,
+    "mse_test": 667.9147592520544,
+    "r2_train": 0.9945730834414472,
+    "r2_test": 0.9954630557718334,
+    "seed": 46,
+    "population_size": 500,
+    "generations": 20,
+    "max_evaluations": 10000,
+    "operators": "+,-,*,/,^,exp,log,sqrt",
+    "algorithm": "GOMEA",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 3,
+    "pop": 500
+  }
+]
