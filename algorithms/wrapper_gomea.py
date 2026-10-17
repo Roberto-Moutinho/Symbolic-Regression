@@ -1,42 +1,128 @@
-import sys 
-import numpy as np 
-import pandas as pd 
-from sklearn.metrics import r2_score, make_scorer, mean_squared_error
+
+import random
+
+import numpy as np
+from sklearn.metrics import mean_squared_error, r2_score
 from pygpg.sk import GPGRegressor
 from pygpg.complexity import compute_complexity
 
-import sympy 
 
-reg = GPGRegressor(
-    fset="+,-,*,/,sin,log,sqrt",
-    d=5,
+FSETS = {
+    "C1": "+,-,*,/",
+    "C2": "+,-,*,/,^,exp,log,sqrt",
+}
+
+
+def run_gomea(
+    X_train,
+    y_train,
+    X_test,
+    y_test,
+    seed=42,
+    scenario="C1",
     pop=500,
-    g=200,
-    t=-1,
-    e=-1
-)
+    generations=None,
+    max_evaluations=10000,
+    depth=5,
+):
+    random.seed(seed)
+    np.random.seed(seed)
 
-if len(sys.argv) > 2:
-    df = pd.read_csv(f"datasets/srbench/{sys.argv[1]}_train{sys.argv[2]}.csv", dtype=np.float64)
-    df_test = pd.read_csv(f"datasets/srbench/{sys.argv[1]}_test{sys.argv[2]}.csv", dtype=np.float64)
-else:
-    df = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_train.csv", dtype=np.float64)
-    df_test = pd.read_csv(f"datasets/realworld/{sys.argv[1]}_test.csv", dtype=np.float64)
+    if scenario not in FSETS:
+        raise ValueError(f"Scenario inválido: {scenario}")
 
-X_train, y_train = df.loc[:, df.columns != 'target'].values, df.target.values
-X_test,  y_test  = df_test.loc[:, df_test.columns != 'target'].values, df_test.target.values
+    pop = int(pop)
+    if pop <= 0:
+        raise ValueError("pop deve ser maior que zero")
 
-reg.fit(X_train, y_train)
+    generations = int(
+        generations or max(1, int(max_evaluations) // pop)
+    )
 
-print("Id,Expression,size,MSE_train,MSE_test,nll_train,nll_test,R2_train,R2_test")
-y_hat = reg.predict(X_train)
-y_hat_test = reg.predict(X_test)
-has_nan = np.any(np.isnan(y_hat))
-has_nan_test = np.any(np.isnan(y_hat_test))
-mse_train = np.inf if has_nan else mean_squared_error(y_train, y_hat)
-mse_test  = np.inf if has_nan_test else mean_squared_error(y_test, y_hat_test)
-r2_train = -np.inf if has_nan else r2_score(y_train, y_hat)
-r2_test  = -np.inf if has_nan else r2_score(y_test, y_hat_test)
-ix = 0 
+    X_train = np.asarray(X_train, dtype=np.float64)
+    y_train = np.asarray(y_train, dtype=np.float64).reshape(-1)
+    X_test = np.asarray(X_test, dtype=np.float64)
+    y_test = np.asarray(y_test, dtype=np.float64).reshape(-1)
 
-print(f'{ix},{reg.model},{compute_complexity(reg.model, complexity_metric="node_count")},{mse_train},{mse_test},{mse_train},{mse_test},{r2_train},{r2_test}')
+    reg = GPGRegressor(
+        fset=FSETS[scenario],
+        d=int(depth),
+        pop=pop,
+        g=generations,
+        t=-1,
+        e=-1,
+    )
+
+    reg.fit(X_train, y_train)
+
+    pred_train = np.asarray(
+        reg.predict(X_train), dtype=float
+    ).reshape(-1)
+
+    pred_test = np.asarray(
+        reg.predict(X_test), dtype=float
+    ).reshape(-1)
+
+    valid_train = (
+        pred_train.shape == y_train.shape
+        and np.all(np.isfinite(pred_train))
+    )
+
+    valid_test = (
+        pred_test.shape == y_test.shape
+        and np.all(np.isfinite(pred_test))
+    )
+
+    mse_train = (
+        float(mean_squared_error(y_train, pred_train))
+        if valid_train
+        else float("inf")
+    )
+
+    mse_test = (
+        float(mean_squared_error(y_test, pred_test))
+        if valid_test
+        else float("inf")
+    )
+
+    r2_train = (
+        float(r2_score(y_train, pred_train))
+        if valid_train
+        else float("-inf")
+    )
+
+    r2_test = (
+        float(r2_score(y_test, pred_test))
+        if valid_test
+        else float("-inf")
+    )
+
+    expression = str(reg.model)
+
+    try:
+        complexity = int(
+            compute_complexity(
+                reg.model,
+                complexity_metric="node_count",
+            )
+        )
+    except Exception:
+        complexity = int(compute_complexity(reg.model))
+
+    return [
+        {
+            "model_id": 0,
+            "expression": expression,
+            "complexity": complexity,
+            "mse_train": mse_train,
+            "mse_test": mse_test,
+            "r2_train": r2_train,
+            "r2_test": r2_test,
+            "seed": int(seed),
+            "population_size": pop,
+            "generations": generations,
+            "max_evaluations": pop * generations,
+            "operators": FSETS[scenario],
+        }
+    ]
+
