@@ -26,7 +26,7 @@
     4,
     5
   ],
-  "max_evaluations_requested_per_run": 1000,
+  "max_evaluations_requested_per_run": 10000,
   "n_pop": 200,
   "n_gen": 5,
   "failures": [],
