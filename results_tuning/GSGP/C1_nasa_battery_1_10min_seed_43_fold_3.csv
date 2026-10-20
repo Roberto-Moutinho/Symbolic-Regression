@@ -1,0 +1,34 @@
+[
+  {
+    "model_id": 0,
+    "expression": "(add, (divide, (multiply, x1, x5), (multiply, x3, x3)), (divide, (add, x3, x5), (multiply, x5, x5))) * f((multiply, x4, x1)) * f((add, x4, x5)) * f((multiply, (multiply, (multiply, x4, x2), x5), (divide, (divide, x4, x0), x5))) * f((add, x3, (add, x2, x5))) * f((multiply, constant_3.0, x3)) * f((divide, x1, constant_4.0)) * f((divide, x0, x0)) * f((subtract, constant__1.0, constant_2.0))",
+    "complexity": 145,
+    "mse_train": 5936.2632987176785,
+    "mse_test": 9507.424336633003,
+    "r2_train": 0.9584912277167232,
+    "r2_test": 0.8757236135977553,
+    "seed": 43,
+    "algorithm": "GSGP",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C1",
+    "fold": 3,
+    "runtime_seconds": 27.830072600001586,
+    "nll_train": 5936.2632987176785,
+    "nll_test": 9507.424336633003,
+    "n_samples": 504,
+    "function_set": [
+      "add",
+      "subtract",
+      "multiply",
+      "divide"
+    ],
+    "pop_size": 500,
+    "n_iter": 100,
+    "n_train": 403,
+    "n_test": 101,
+    "n_features": 6,
+    "source_dataset": "C:\\Users\\user\\OneDrive\\Documentos\\Symbolic-Regression-main\\dados\\datasets\\nasa_battery_1_10min_train.csv",
+    "status": "success",
+    "error": null
+  }
+]

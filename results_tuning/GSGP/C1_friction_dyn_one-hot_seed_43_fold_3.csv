@@ -1,0 +1,34 @@
+[
+  {
+    "model_id": 0,
+    "expression": "(add, (divide, (divide, x13, (add, x10, x10)), x16), x6) * f((multiply, (multiply, x2, x4), (multiply, x13, x16))) * f((multiply, (multiply, (subtract, x10, x9), x10), x13)) * f((divide, constant__1.0, constant_4.0)) * f((divide, constant__1.0, (subtract, x8, (add, x0, x6)))) * f((subtract, x12, x0)) * f((add, (add, (multiply, (divide, x4, x7), x7), constant__1.0), (subtract, (add, (add, x8, constant_4.0), x6), constant_4.0)))",
+    "complexity": 123,
+    "mse_train": 0.0001228404242920503,
+    "mse_test": 0.0001748685783028631,
+    "r2_train": 0.36475061733326464,
+    "r2_test": -0.23589087023409228,
+    "seed": 43,
+    "algorithm": "GSGP",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C1",
+    "fold": 3,
+    "runtime_seconds": 28.649301399997057,
+    "nll_train": 0.0001228404242920503,
+    "nll_test": 0.0001748685783028631,
+    "n_samples": 1009,
+    "function_set": [
+      "add",
+      "subtract",
+      "multiply",
+      "divide"
+    ],
+    "pop_size": 500,
+    "n_iter": 100,
+    "n_train": 807,
+    "n_test": 202,
+    "n_features": 17,
+    "source_dataset": "C:\\Users\\user\\OneDrive\\Documentos\\Symbolic-Regression-main\\dados\\datasets\\friction_dyn_one-hot_train.csv",
+    "status": "success",
+    "error": null
+  }
+]

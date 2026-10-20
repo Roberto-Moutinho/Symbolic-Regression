@@ -1,0 +1,34 @@
+[
+  {
+    "model_id": 0,
+    "expression": "(divide, x0, x0) * f((divide, (add, (add, constant_2.0, x1), x1), (add, x1, x0))) * f((subtract, (subtract, (multiply, x1, x1), (add, x1, (multiply, (divide, x0, constant_2.0), x1))), (divide, (subtract, (divide, (divide, x1, x0), x1), constant_5.0), (multiply, x0, x0)))) * f((divide, (subtract, x1, (add, (divide, (add, x0, x1), x0), x0)), x0)) * f((subtract, x0, x1))",
+    "complexity": 97,
+    "mse_train": 0.001833449567619572,
+    "mse_test": 0.003121330771633005,
+    "r2_train": 0.9468221841065193,
+    "r2_test": 0.6850568140627821,
+    "seed": 46,
+    "algorithm": "GSGP",
+    "dataset": "nikuradse_1",
+    "scenario": "C1",
+    "fold": 4,
+    "runtime_seconds": 26.695328800000425,
+    "nll_train": 0.001833449567619572,
+    "nll_test": 0.003121330771633005,
+    "n_samples": 230,
+    "function_set": [
+      "add",
+      "subtract",
+      "multiply",
+      "divide"
+    ],
+    "pop_size": 500,
+    "n_iter": 100,
+    "n_train": 184,
+    "n_test": 46,
+    "n_features": 2,
+    "source_dataset": "C:\\Users\\user\\OneDrive\\Documentos\\Symbolic-Regression-main\\dados\\datasets\\nikuradse_1_train.csv",
+    "status": "success",
+    "error": null
+  }
+]
