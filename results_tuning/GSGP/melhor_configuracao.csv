@@ -1,0 +1,5 @@
+﻿Dataset,Classe,Seed,Fold,MSE de teste,R2 de teste,Complexidade,Equação
+chemical_2_competition,C2,42,2,0.10452625859990537,0.25354611140400163,34,"(sqrt, (log, (multiply, constant_5.0, x39))) * f((divide, x41, x34)) * f((log, constant_2.0))"
+friction_dyn_one-hot,C2,44,1,4.122277564047404e-05,0.7086563374951618,73,"(log, (log, (add, constant_4.0, constant__1.0))) * f((add, (divide, (add, (exp, constant_3.0), (sqrt, (sqrt, x12))), x2), x6)) * f((log, x0)) * f((sqrt, (add, (exp, x5), (sqrt, x8)))) * f((exp, x4))"
+nasa_battery_1_10min,C2,46,4,3715.8168137881817,0.9514286656617414,101,"(multiply, x2, (add, (exp, (sqrt, x5)), x3)) * f((power, (log, x3), x4)) * f((multiply, x2, (divide, (multiply, x5, constant_2.0), x0))) * f((log, x3)) * f((sqrt, x1)) * f((exp, constant_3.0)) * f((log, (subtract, constant_3.0, (log, x5))))"
+nikuradse_1,C2,45,5,0.000764186883799108,0.9228933203675783,25,"(sqrt, (sqrt, (divide, x1, x0))) * f((exp, (log, (exp, (divide, x0, (power, x1, x1))))))"
