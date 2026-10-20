@@ -1,0 +1,38 @@
+[
+  {
+    "model_id": 0,
+    "expression": "(multiply, x2, (add, (exp, (sqrt, x5)), x3)) * f((power, (log, x3), x4)) * f((multiply, x2, (divide, (multiply, x5, constant_2.0), x0))) * f((log, x3)) * f((sqrt, x1)) * f((exp, constant_3.0)) * f((log, (subtract, constant_3.0, (log, x5))))",
+    "complexity": 101,
+    "mse_train": 11453.901849644943,
+    "mse_test": 3715.8168137881817,
+    "r2_train": 0.9199096502787173,
+    "r2_test": 0.9514286656617414,
+    "seed": 46,
+    "algorithm": "GSGP",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 4,
+    "runtime_seconds": 32.22677580000163,
+    "nll_train": 11453.901849644943,
+    "nll_test": 3715.8168137881817,
+    "n_samples": 504,
+    "function_set": [
+      "add",
+      "subtract",
+      "multiply",
+      "divide",
+      "power",
+      "exp",
+      "log",
+      "sqrt"
+    ],
+    "pop_size": 500,
+    "n_iter": 100,
+    "n_train": 403,
+    "n_test": 101,
+    "n_features": 6,
+    "source_dataset": "C:\\Users\\user\\OneDrive\\Documentos\\Symbolic-Regression-main\\dados\\datasets\\nasa_battery_1_10min_train.csv",
+    "status": "success",
+    "error": null
+  }
+]

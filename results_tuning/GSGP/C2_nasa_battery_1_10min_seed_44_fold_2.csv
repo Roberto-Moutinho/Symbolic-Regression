@@ -1,0 +1,38 @@
+[
+  {
+    "model_id": 0,
+    "expression": "(add, (subtract, (add, (multiply, (power, x4, x2), (divide, x5, constant_4.0)), (add, (power, constant_4.0, constant__1.0), (log, x3))), (sqrt, (multiply, (power, x4, constant__1.0), (exp, x2)))), (sqrt, (log, (sqrt, (multiply, x3, x3))))) * f((subtract, (exp, (divide, (log, x0), x2)), x4)) * f((add, (sqrt, (divide, x2, x2)), (multiply, x1, (subtract, x4, (log, (exp, constant_5.0)))))) * f((add, x0, (subtract, (log, x2), x0))) * f((multiply, constant_2.0, x3)) * f((sqrt, x3))",
+    "complexity": 119,
+    "mse_train": 14277.589986277411,
+    "mse_test": 12664.697832939264,
+    "r2_train": 0.9001652720453956,
+    "r2_test": 0.8344532834734685,
+    "seed": 44,
+    "algorithm": "GSGP",
+    "dataset": "nasa_battery_1_10min",
+    "scenario": "C2",
+    "fold": 2,
+    "runtime_seconds": 33.92429589999665,
+    "nll_train": 14277.589986277411,
+    "nll_test": 12664.697832939264,
+    "n_samples": 504,
+    "function_set": [
+      "add",
+      "subtract",
+      "multiply",
+      "divide",
+      "power",
+      "exp",
+      "log",
+      "sqrt"
+    ],
+    "pop_size": 500,
+    "n_iter": 100,
+    "n_train": 403,
+    "n_test": 101,
+    "n_features": 6,
+    "source_dataset": "C:\\Users\\user\\OneDrive\\Documentos\\Symbolic-Regression-main\\dados\\datasets\\nasa_battery_1_10min_train.csv",
+    "status": "success",
+    "error": null
+  }
+]

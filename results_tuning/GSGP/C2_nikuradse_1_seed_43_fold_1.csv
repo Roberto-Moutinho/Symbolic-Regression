@@ -1,0 +1,38 @@
+[
+  {
+    "model_id": 0,
+    "expression": "(exp, (power, x0, constant__1.0)) * f((sqrt, (divide, x1, (add, x1, x0)))) * f((log, (power, constant_3.0, (divide, constant_2.0, (add, (sqrt, x1), (power, x0, x1)))))) * f((divide, (subtract, (log, (power, (exp, x0), constant__1.0)), (log, x0)), (divide, x0, (log, (subtract, constant__1.0, (multiply, x0, x0)))))) * f((add, (add, (power, x1, (log, x0)), (subtract, x0, x0)), (exp, (exp, (power, (sqrt, x0), x1))))) * f((power, (power, (multiply, x0, x1), constant_2.0), (add, (power, (multiply, (exp, x1), constant_4.0), x0), x1)))",
+    "complexity": 127,
+    "mse_train": 0.0012985847617557175,
+    "mse_test": 0.0014586111086245053,
+    "r2_train": 0.9623355326471388,
+    "r2_test": 0.8528257133884971,
+    "seed": 43,
+    "algorithm": "GSGP",
+    "dataset": "nikuradse_1",
+    "scenario": "C2",
+    "fold": 1,
+    "runtime_seconds": 27.44049819999782,
+    "nll_train": 0.0012985847617557175,
+    "nll_test": 0.0014586111086245053,
+    "n_samples": 230,
+    "function_set": [
+      "add",
+      "subtract",
+      "multiply",
+      "divide",
+      "power",
+      "exp",
+      "log",
+      "sqrt"
+    ],
+    "pop_size": 500,
+    "n_iter": 100,
+    "n_train": 184,
+    "n_test": 46,
+    "n_features": 2,
+    "source_dataset": "C:\\Users\\user\\OneDrive\\Documentos\\Symbolic-Regression-main\\dados\\datasets\\nikuradse_1_train.csv",
+    "status": "success",
+    "error": null
+  }
+]

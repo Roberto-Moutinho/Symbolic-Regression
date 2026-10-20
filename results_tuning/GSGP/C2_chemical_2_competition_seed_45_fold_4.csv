@@ -1,0 +1,38 @@
+[
+  {
+    "model_id": 0,
+    "expression": "(exp, (log, (sqrt, (log, x45)))) * f((log, (divide, x28, x33))) * f((multiply, x46, (multiply, constant_3.0, (log, x54)))) * f((sqrt, (divide, x47, x25)))",
+    "complexity": 55,
+    "mse_train": 0.10369207214726901,
+    "mse_test": 0.14193052783802415,
+    "r2_train": 0.08631916405390971,
+    "r2_test": -0.0135691818904502,
+    "seed": 45,
+    "algorithm": "GSGP",
+    "dataset": "chemical_2_competition",
+    "scenario": "C2",
+    "fold": 4,
+    "runtime_seconds": 30.11129990000336,
+    "nll_train": 0.10369207214726901,
+    "nll_test": 0.14193052783802415,
+    "n_samples": 711,
+    "function_set": [
+      "add",
+      "subtract",
+      "multiply",
+      "divide",
+      "power",
+      "exp",
+      "log",
+      "sqrt"
+    ],
+    "pop_size": 500,
+    "n_iter": 100,
+    "n_train": 569,
+    "n_test": 142,
+    "n_features": 57,
+    "source_dataset": "C:\\Users\\user\\OneDrive\\Documentos\\Symbolic-Regression-main\\dados\\datasets\\chemical_2_competition_train.csv",
+    "status": "success",
+    "error": null
+  }
+]

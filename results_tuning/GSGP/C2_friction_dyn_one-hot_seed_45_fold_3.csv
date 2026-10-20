@@ -1,0 +1,38 @@
+[
+  {
+    "model_id": 0,
+    "expression": "(exp, constant__1.0) * f((sqrt, (multiply, x16, (multiply, x14, constant__1.0)))) * f((log, (log, constant_5.0))) * f((exp, x6)) * f((divide, constant_2.0, x1)) * f((divide, (power, (exp, constant_3.0), x8), x0)) * f((multiply, x11, x2))",
+    "complexity": 97,
+    "mse_train": 7.32152480434441e-05,
+    "mse_test": 7.335784535456942e-05,
+    "r2_train": 0.6213791885738407,
+    "r2_test": 0.4815404104404938,
+    "seed": 45,
+    "algorithm": "GSGP",
+    "dataset": "friction_dyn_one-hot",
+    "scenario": "C2",
+    "fold": 3,
+    "runtime_seconds": 25.81795950000378,
+    "nll_train": 7.32152480434441e-05,
+    "nll_test": 7.335784535456942e-05,
+    "n_samples": 1009,
+    "function_set": [
+      "add",
+      "subtract",
+      "multiply",
+      "divide",
+      "power",
+      "exp",
+      "log",
+      "sqrt"
+    ],
+    "pop_size": 500,
+    "n_iter": 100,
+    "n_train": 807,
+    "n_test": 202,
+    "n_features": 17,
+    "source_dataset": "C:\\Users\\user\\OneDrive\\Documentos\\Symbolic-Regression-main\\dados\\datasets\\friction_dyn_one-hot_train.csv",
+    "status": "success",
+    "error": null
+  }
+]
